@@ -1,0 +1,23 @@
+@mixin text($font-family: 'DM Sans', $a: 700, $b: 14px, $c: 18px) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $a;
+  font-size: $b;
+  line-height: $c / $b;
+  //   Приклад застосування:
+  // @include text('DM Sans', 700, 16px, 21px);
+  //   можна прописати так:
+  // @include text();
+  //   тоді всі значення будуть по замовченню як в першому рядку
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition() {
+  transition: transform 250ms $cubic, color 250ms $cubic,
+    background-color 250ms $cubic;
+}

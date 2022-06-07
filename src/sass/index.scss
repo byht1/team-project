@@ -1,2 +1,16 @@
-@import './common';
-@import './example';
+// Скидання стилів і хмінні
+@import './utils/reset';
+@import './utils/value';
+
+// Міксин
+@import './vendors/mixin';
+
+// Матеріали проекту
+@import './component/header';
+@import './component/hero';
+@import './component/about';
+@import './component/advantages';
+@import './component/gallery';
+@import './component/customer-reviews';
+@import './component/contacts';
+@import './component/footer';
