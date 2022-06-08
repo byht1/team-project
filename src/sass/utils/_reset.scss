@@ -3,6 +3,7 @@
 body {
   width: 100%;
   background-color: teal;
+  @include text('DM Sans', 500, 16px, 30px);
 }
 
 .none {
@@ -81,8 +82,8 @@ section {
 }
 
 .conteiner {
-  min-width: 100%;
-  padding: 0 16px;
+  width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -94,5 +95,6 @@ section {
 @media screen and (min-width: 1280px) {
   .conteiner {
     width: 1280px;
+    padding: 0 16px;
   }
 }
