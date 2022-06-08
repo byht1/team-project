@@ -18,6 +18,6 @@
 }
 
 @mixin transition() {
-  transition: transform 250ms $cubic, color 250ms $cubic,
-    background-color 250ms $cubic;
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 }
