@@ -1,9 +1,9 @@
-// Скидання стилів і хмінні
-@import './utils/reset';
-@import './utils/value';
-
 // Міксин
 @import './vendors/mixin';
+
+// Скидання стилів
+@import './utils/value';
+@import './utils/reset';
 
 // Матеріали проекту
 @import './component/header';

@@ -1,8 +1,10 @@
-$accent: #e17992;
-$fon: #ffb8ca;
-$wihte: #fff;
-$accentText: #d41443;
-$texrBlack: #000000;
-$comitFon: #907e82;
-$accentSalmon: #ffa5ba;
-$cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+:root {
+  --accent: #e17992;
+  --fon: #ffb8ca;
+  --accent-text: #d41443;
+  --accent-salmon: #ffa5ba;
+  --text-black: #000000;
+  --comit-fon: #907e82;
+  --focus-white: #ffffff;
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
