@@ -9,21 +9,16 @@ const refs = {
   hero: document.querySelector('#hero'),
 };
 
-const arr = [];
-arr.push(refs.hero);
-arr.push(refs.about);
-arr.push(refs.cow);
-arr.push(refs.product);
-arr.push(refs.contact);
-
 refs.menu.addEventListener('click', () => {
   refs.nav.classList.toggle('nav--show');
   refs.body.classList.toggle('hidden');
+  refs.menu.classList.toggle('is-open');
 });
 
 refs.end.addEventListener('click', () => {
   refs.nav.classList.toggle('nav--show');
   refs.body.classList.toggle('hidden');
+  refs.menu.classList.toggle('is-open');
 });
 
 window.addEventListener(

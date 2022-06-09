@@ -27,6 +27,13 @@
   z-index: 5;
   margin-left: auto;
   background-color: transparent;
+  opacity: 1;
+
+  transition: opacity 250ms var(--cubic);
+}
+
+.is-open {
+  opacity: 0;
 }
 
 .header__dutton-end {
@@ -34,6 +41,8 @@
   z-index: 1001;
   top: 23px;
   right: 28px;
+
+  background-color: transparent;
 }
 
 .header__button {
