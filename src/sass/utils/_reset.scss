@@ -3,7 +3,7 @@
 body {
   width: 100%;
   background-color: teal;
-  @include text('DM Sans', 500, 16px, 30px);
+  font-family: 'DM Sans';
 }
 
 .none {
