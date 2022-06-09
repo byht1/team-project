@@ -1,8 +1,8 @@
 <section class="section-about" id="about">
+  <p class="section-about__text">tradition and love</p>
+  <h2 class="section-about__title">how it’s made?</h2>
   <div class="container">
-    <p>tradition and love</p>
-    <h2>how it’s made?</h2>
-    <picture>
+    <picture class="section-about__picture">
       <source
         srcset="
           ../images/how-its-made/web/cow-mobail-280-min.webp 1x,
@@ -11,26 +11,44 @@
         type="image/webp"
       />
       <img
+        class="section-about__image"
         srcset="
-          ../images/how-its-made/web/cow-mobail-280-min.webp 1x,
-          ../images/how-its-made/web/cow-mobail-560-min.webp 2x
+          ../images/how-its-made/cow-mobail-280-min.png 1x,
+          ../images/how-its-made/cow-mobail-560-min.png 2x
         "
-        src=""
-        alt="ноутбук"
-        width="370"
-        height="294"
+        src="../images/how-its-made/cow-mobail-280-min.png"
+        alt="Кувшин с молоком на фоне коровы"
+        width="280"
+        height="279"
+        loading="lazy"
       />
-      <p>
-        Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-        cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
-        justo fringilla.
-      </p>
-      <p>
-        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-        Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-        suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-        tincidunt. Aliquam erat volutpat. Aenean accumsan.
-      </p>
     </picture>
+    <div class="info">
+      <ul class="info__list">
+        <li class="info__item">
+          <p class="info__text">
+            Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel
+            justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend
+            erat at justo fringilla.
+          </p>
+        </li>
+        <li class="info__item">
+          <p class="info__text">
+            Curabitur lacinia enim at ex blandit, vel pellentesque odio
+            elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
+            euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras
+            massa nibh, tincidunt. Aliquam erat volutpat. Aenean accumsan.
+          </p>
+        </li>
+        <li class="info__item">
+          <p class="info__text">Aliquam erat volutpat. Aenean accumsan.</p>
+        </li>
+      </ul>
+      <button class="info__button info__button--accent" type="button">
+        <svg width="100" height="45">
+          <use href="../images/sprite.svg#read-more"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
