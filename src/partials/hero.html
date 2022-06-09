@@ -1,0 +1,45 @@
+<section class="hero">
+  <div class="conteiner hero-container">
+    <div class="circle">
+      <picture>
+        <source
+          srcset="
+            ./images/hero/web/ice-cream-mob-1x.webp 1x,
+            ./images/hero/web/ice-cream-mob-2x.webp 2x
+          "
+          type="image/webp"
+          media="(min-width:320px)"
+        />
+        <source
+          srcset="
+            ./images/hero/ice-cream-mob-1x.png 1x,
+            ./images/hero/ice-cream-mob-2x.png 2x
+          "
+          media="(min-width:320px)"
+        />
+        <img
+          src="./images/hero/ice-cream-mob-1x.png"
+          alt="ice-cream"
+          width="171"
+          height="410"
+          class="hero-ice-cream"
+        />
+      </picture>
+    </div>
+    <div class="hero__content">
+      <h2 class="hero__title">
+        ice cream made with <span class="title__accent">passion</span>
+      </h2>
+      <ul class="hero__button-list">
+        <li class="hero__button-item">
+          <a href="" class="hero__button">Products</a>
+        </li>
+        <li class="hero__button-item hero__button-item--inverse">
+          <a href="" class="hero__button hero__button--inverse"
+            >How it’s made?</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
