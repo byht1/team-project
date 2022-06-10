@@ -114,7 +114,7 @@
 }
 
 /* Dots */
-.slick-dotted.slick-slider
+/* .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
 }
@@ -174,8 +174,8 @@
 .slick-dots li button:focus:before
 {
     opacity: 1;
-}
-.slick-dots li button:before
+} */
+/* .slick-dots li button:before
 {
     font-family: 'slick';
     font-size: 6px;
@@ -201,4 +201,4 @@
 {
     opacity: .75;
     color: black;
-}
+} */
