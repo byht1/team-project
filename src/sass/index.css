@@ -1,0 +1,306 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent: #e17992;
+  --fon: #ffb8ca;
+  --accent-text: #d41443;
+  --accent-salmon: #ffa5ba;
+  --text-black: #000000;
+  --comit-fon: #907e82;
+  --focus-white: #ffffff;
+  --cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  width: 100%;
+  background-color: teal;
+  font-family: "DM Sans";
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conteiner {
+    width: 1280px;
+  }
+}
+.logo__photo {
+  width: 40px;
+}
+
+.section-products {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.products-item {
+  display: block;
+  max-width: 280px;
+  height: 489px;
+  background-color: #FFB8CA;
+  padding-top: 160px;
+  padding-bottom: 40px;
+}
+
+.products-top-text {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  font-family: "Titan One";
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFA5BA;
+  padding-bottom: 15px;
+}
+
+.products-top-title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.1470588235;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  padding-bottom: 140px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer {
+    background-color: #FAFAFA;
+    padding-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .box-slick {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0);
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .box-man {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-pic {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 32px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-icon {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .box-text {
+    position: relative;
+    top: 13px;
+    width: 180px;
+    text-align: center;
+    margin-bottom: 33px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-text {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 255%;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-list-dot {
+    margin-bottom: 16px;
+    list-style: inside;
+    color: #C7133E;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-item-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .customer-title {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 186%;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .slick-dotted.slick-slider {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-image: url(E:team-projectsrcimagespeople/home.png);
+    background-position: center;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slick-dots li:not(:last-child) {
+    margin-right: 18px;
+  }
+  .slick-dots li button {
+    border: 0;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: block;
+    height: 12px;
+    width: 12px;
+    outline: none;
+    line-height: 0px;
+    font-size: 0px;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .slick-dots li button:focus {
+    background-color: #FAFAFA;
+  }
+}/*# sourceMappingURL=index.css.map */
