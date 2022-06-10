@@ -3,6 +3,7 @@
    
     background-color: #FAFAFA;
     padding-bottom: 48px;
+    padding-top: 40px;
     position: relative;
     overflow: hidden;
     
@@ -179,7 +180,7 @@ line-height: 186%;
         display: inline-block;
         height: 12px;
         width: 12px;
-        background-image: url(E:\team-project\src\images\people/home.png);
+        
         background-position: center;
         padding: 0;
         cursor: pointer;
@@ -204,6 +205,19 @@ line-height: 186%;
                 background-color: #FAFAFA;
             }
             }
+        }
+    }
+}
+.slick-dots li.slick-active {
+    // background-color: #C7133E;
+  
+    background-image: url(../images/people/home.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
             // &:hover, &:focus {
             //     outline: none;
             //     &:before {
@@ -226,11 +240,11 @@ line-height: 186%;
             //     -webkit-font-smoothing: antialiased;
             //     -moz-osx-font-smoothing: grayscale;
             // }
-        }
+        
         // &.slick-active button:before {
         //     color: $slick-dot-color-active;
         //     opacity: $slick-opacity-default;
         // }
        
-    }
-}
+    
+
