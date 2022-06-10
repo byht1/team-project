@@ -2,7 +2,6 @@
 
 body {
   width: 100%;
-  background-color: teal;
   font-family: 'DM Sans';
 }
 
@@ -31,8 +30,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-
 
 h1,
 h2,
@@ -95,9 +92,9 @@ section {
     padding: 0 16px;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .conteiner {
     width: 1280px;
-    
   }
 }
