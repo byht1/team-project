@@ -1,15 +1,14 @@
 .section-products {
     padding-top: 80px;
     padding-bottom: 40px;
-    & > .conteiner {
-        // width: 100%;
-        max-width: 480px;
-    }
-        
+    & .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
 }
 .products-top-text {
     @include text('Titan One', 400, 18px, 21px);
-    text-align: center;
     text-transform: uppercase;
 
     color: var(--accent-salmon);
@@ -19,26 +18,25 @@
 .products-top-title {
     @include text('Titan One', 400, 34px, 39px);
     letter-spacing: 0.04em;
-    text-align: center;
     text-transform: uppercase;
 
     color: var(--accent-text);
     padding-bottom: 140px;
 }
-
 .products-item {
     position: relative;
-    max-width: 100%;
+    width: 377px;
     height: 490px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     border-radius: 24px;
     padding: 160px 32px 40px 32px;
     &:not(:last-child) {
         margin-bottom: 140px;
     }
-
-    text-align: center;
-
     &::before {
         position: absolute;
             top: -140px;
@@ -86,7 +84,7 @@
     &.third {
         background-color: #C2E297;
         &::before {
-            background-image: url('../images/products/millkshakes/milkshakes-mobail-249-min.png');
+            background-image: url('../images/products/milkshakes/milkshakes-mobail-249-min.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -94,7 +92,7 @@
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                background-image: url('../images/products/millkshakes/milkshakes-mobail-498-min.png');
+                background-image: url('../images/products/milkshakes/milkshakes-mobail-498-min.png');
             }
         }
     }
@@ -123,8 +121,6 @@
     @include text('DM Sans', 700, 14px, 21px);
     letter-spacing: 0.04em;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
 
     max-width: 200px;
     margin-bottom: 32px;
