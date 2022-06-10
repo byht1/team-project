@@ -2,7 +2,6 @@
 
 body {
   width: 100%;
-  background-color: teal;
   font-family: 'DM Sans';
 }
 
@@ -81,21 +80,21 @@ section {
   overflow: hidden;
 }
 
-.conteiner {
+.container {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-  .conteiner {
+  .container {
     width: 768px;
     padding: 0 16px;
   }
 }
+
 @media screen and (min-width: 1280px) {
-  .conteiner {
+  .container {
     width: 1280px;
-    
   }
 }

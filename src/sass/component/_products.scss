@@ -1,55 +1,144 @@
 .section-products {
     padding-top: 80px;
     padding-bottom: 40px;
+    & .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
 }
-
-.products-item {
-    display: block;
-    max-width: 280px;
-    height: 489px;
-    background-color: #FFB8CA;
-    padding-top: 160px;
-    padding-bottom: 40px;
-}
-
 .products-top-text {
     @include text('Titan One', 400, 18px, 21px);
-    font-family: 'Titan One';
-    font-style: normal;
-    // font-weight: 400;
-    // font-size: 18px;
-    // line-height: 21px;
-
-    text-align: center;
     text-transform: uppercase;
 
-    color: #FFA5BA;
+    color: var(--accent-salmon);
     padding-bottom: 15px;
 }
 
 .products-top-title {
     @include text('Titan One', 400, 34px, 39px);
-    // font-weight: 400;
-    // font-size: 34px;
-    // line-height: 39px;
-    text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: var(--accent-text);
     padding-bottom: 140px;
-    // padding-bottom: 8px;
+}
+.products-item {
+    position: relative;
+    width: 377px;
+    height: 490px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 24px;
+    padding: 160px 32px 40px 32px;
+    &:not(:last-child) {
+        margin-bottom: 140px;
+    }
+    &::before {
+        position: absolute;
+            top: -140px;
+            left: 50%;
+            transform: translateX(-50%);
+        
+            display: block;
+        
+            content: "";
+            width: 280px;
+            height: 280px;
+            background-color: transparent;
+    }
+    
+    &.first {
+        background-color: #FFB8CA;
+
+        &::before {
+            background-image: url('../images/products/ice-cream/ice-cream-mobail-249-min.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/products/ice-cream/ice-cream-mobail-498-min.png');
+                }
+        }
+    }
+    &.second {
+        background-color: #F0D1A5;
+        &::before {
+            background-image: url('../images/products/ice-coffee/ice-coffee-mobail-249-min.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/products/ice-coffee/ice-coffee-mobail-498-min.png');
+            }
+        }
+    }
+    &.third {
+        background-color: #C2E297;
+        &::before {
+            background-image: url('../images/products/milkshakes/milkshakes-mobail-249-min.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/products/milkshakes/milkshakes-mobail-498-min.png');
+            }
+        }
+    }
 }
 
-// @mixin text($font-family: 'DM Sans', $a: 700, $b: 14px, $c: 18px) {
-//     font-family: $font-family;
-//     font-style: normal;
-//     font-weight: $a;
-//     font-size: $b;
-//     line-height: $c / $b;
-//     //   Приклад застосування:
-//     // @include text('DM Sans', 700, 16px, 21px);
-//     //   можна прописати так:
-//     // @include text();
-//     //   тоді всі значення будуть по замовченню як в першому рядку
-// }
+
+.products-title {
+    position: relative;
+    margin-bottom: 70px;
+    @include text('Titan One', 400, 20px, 23px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:after {
+        position: absolute;
+        top: 38px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "\2026";
+        width: 26px;
+        height: 6px;
+    }
+}
+.products-text {
+    @include text('DM Sans', 700, 14px, 21px);
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    max-width: 200px;
+    margin-bottom: 32px;
+    
+    color: #FFFFFF;
+    
+}
+.product-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.product-button-icon {
+    padding: 0 14px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    fill: var(--accent-text);
+}

@@ -21,3 +21,21 @@
   transition: transform 250ms var(--cubic), color 250ms var(--cubic),
     background-color 250ms var(--cubic);
 }
+
+// @mixin mobile {
+//   @media screen and (min-width: 320px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media screen and (min-width: 1280px) {
+//     @content;
+//   }
+// }

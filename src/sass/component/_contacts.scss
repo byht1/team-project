@@ -1,0 +1,138 @@
+.contacts-section{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: linear-gradient(rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 26%,rgba(255,245,246,1) 26%, rgba(255,245,246,1) 100%);
+}
+.contacts-section .conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts-list {
+    display: grid;
+}
+.contacts-list__contact{
+    & + &{
+        margin-top: 20px;
+    }
+}
+.contact {
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+}
+.contact--light{
+    background: var(--focus-white);
+}
+.contact__category-wrap {
+    @include flexCenter;
+    height: 16px;
+    border-radius: 4px;
+}
+.contact__category-wrap--cafe {
+    max-width: 80px;
+    background: var(--dull-yellow);
+}
+.contact__category-wrap--foodtruck {
+    max-width: 130px;
+    background: var(--dull-green);
+}
+.loc__info{
+    margin-top: 20px;
+    & p{
+        margin-top: 8px;
+    }
+}
+.contact__work-time{
+    & div + div{
+         margin-top: 8px;
+    }
+}
+.contact__links{
+    & .contact__text{
+        transition: color var(--cubic), text-shadow var(--cubic);
+        &:hover,
+        &:focus{
+            text-shadow: 0 0 5px rgba(212, 20, 67, 0.1),
+            0 0 8px rgba(212, 20, 67, 0.05);
+            color: var(--accent-salmon);
+        }
+    }
+}
+.contact__title {
+    @include text($a:700,$b:12px,$c:22px);
+    letter-spacing: 0.04em;
+}
+.contact__title--dark {
+    color: var(--text-black);
+}
+.contact__title--light{
+    color:var(--focus-white);
+}
+.contact__text {
+    @include text($a: 700, $b: 12px, $c: 22px);
+}
+.contact__text--light {
+    color:var(--accent-salmon);
+}
+.contact__text--dim {
+    color: var(--comit-fon);
+}
+.contact__line {
+    border: 1px solid #E1E1E1;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.contacts-btn-box{
+    margin-top: 32px;
+    width:161px;
+}
+.contacts-btn{
+    transition: var(--cubic);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    border-radius: 22px;
+    @include text($a:700,$b:16px,$c:21px);
+    & + &{
+        margin-top: 10px;
+    }
+    &:focus,
+    &:hover{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.contacts-btn--light{
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: var(--focus-white);
+    color: var(--accent-text);
+    & .contacts_icon-arrow{
+        stroke:var(--accent-text);
+    }
+    &:focus,
+    &:hover{
+        background-color: var(--focus-gray);
+    }
+}
+.contacts-btn--dark {
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: var(--accent-bg);
+    color: var(--focus-white);
+    & .contacts_icon-arrow{
+        stroke:var(--focus-white);
+    }
+    &:focus,
+    &:hover{
+        background-color: var(--darker-accent-bg);
+    }
+}
+.contacts_icon-arrow{
+    width: 7px;
+    height: 10px;
+}
