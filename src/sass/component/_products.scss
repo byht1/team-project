@@ -1,75 +1,130 @@
 .section-products {
     padding-top: 80px;
     padding-bottom: 40px;
-    & .conteiner {
+    @include tablet {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    & .container {
         display: flex;
         flex-direction: column;
         align-items: center;
     } 
 }
 .products-top-text {
-    @include text('Titan One', 400, 18px, 21px);
+    font-family: 'Titan One';
+    @include font (null, 18px, 21px / 18px);
+    @include tablet {
+        @include font (null, 26px, 30px / 26px);
+    }
     text-transform: uppercase;
 
     color: var(--accent-salmon);
-    padding-bottom: 15px;
+    margin-bottom: 15px;
+    @include tablet {
+        margin-bottom: 18px;
+    }
 }
 
 .products-top-title {
-    @include text('Titan One', 400, 34px, 39px);
+    font-family: 'Titan One';
+    @include font (400, 34px, 39px / 34px);
+    @include tablet {
+        @include font (null, 48px, 55px / 48px);
+    }
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: var(--accent-text);
-    padding-bottom: 140px;
+    margin-bottom: 140px;
+    @include tablet {
+        margin-bottom: 154px;
+    }
+}
+.products-list {
+    @include tablet {
+        display: flex;
+        margin-left: -16px;
+    }
 }
 .products-item {
     position: relative;
-    width: 377px;
-    height: 490px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 377px;
+    height: 490px;
     
     border-radius: 24px;
-    padding: 160px 32px 40px 32px;
-    &:not(:last-child) {
-        margin-bottom: 140px;
+    padding: 160px 40px 40px;
+    margin-bottom: 140px;
+
+    &:last-child {
+        margin-bottom: 0;
     }
+
+    @include tablet {
+        flex-basis: calc(100% / 3 - 16px);
+        margin-left: 16px;
+        margin-bottom: 0;
+
+        max-width: 100%;
+        height: 473px;
+        padding: 118px 32px 40px;
+    }
+
+
     &::before {
         position: absolute;
-            top: -140px;
-            left: 50%;
-            transform: translateX(-50%);
-        
-            display: block;
-        
-            content: "";
-            width: 280px;
-            height: 280px;
-            background-color: transparent;
+        top: -140px;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        display: block;
+    
+        content: "";
+        width: 280px;
+        height: 280px;
+        background-color: transparent;
+        @include tablet {
+            top: -154px;
+            width: 224px;
+            height: 224px;
+        }
+
+
     }
     
     &.first {
         background-color: #FFB8CA;
 
         &::before {
-            background-image: url('../images/products/ice-cream/ice-cream-mobail-249-min.png');
+            background-image: url('../images/products/ice-cream/ice-cream-mob-249-min.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             @media (min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
-                    background-image: url('../images/products/ice-cream/ice-cream-mobail-498-min.png');
+                    background-image: url('../images/products/ice-cream/ice-cream-mob-498-min.png');
                 }
+
+            @include tablet {
+                background-image: url('../images/products/ice-cream/ice-cream-tablet-220-min.png');
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url('../images/products/ice-cream/ice-cream-tablet-440-min.png');
+                    }
+            }    
         }
     }
     &.second {
         background-color: #F0D1A5;
         &::before {
-            background-image: url('../images/products/ice-coffee/ice-coffee-mobail-249-min.png');
+            background-image: url('../images/products/ice-coffee/ice-coffee-mob-249-min.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -77,14 +132,23 @@
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                background-image: url('../images/products/ice-coffee/ice-coffee-mobail-498-min.png');
+                background-image: url('../images/products/ice-coffee/ice-coffee-mob-498-min.png');
+            }
+            @include tablet {
+                background-image: url('../images/products/ice-coffee/ice-coffee-tablet-220-min.png');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/products/ice-coffee/ice-coffee-tablet-440-min.png');
+                }
             }
         }
     }
     &.third {
         background-color: #C2E297;
         &::before {
-            background-image: url('../images/products/milkshakes/milkshakes-mobail-249-min.png');
+            background-image: url('../images/products/milkshakes/milkshakes-mob-249-min.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -92,7 +156,16 @@
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                background-image: url('../images/products/milkshakes/milkshakes-mobail-498-min.png');
+                background-image: url('../images/products/milkshakes/milkshakes-mob-498-min.png');
+            }
+            @include tablet {
+                background-image: url('../images/products/milkshakes/milkshakes-tablet-220-min.png');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/products/milkshakes/milkshakes-tablet-440-min.png');
+                }
             }
         }
     }
@@ -102,7 +175,8 @@
 .products-title {
     position: relative;
     margin-bottom: 70px;
-    @include text('Titan One', 400, 20px, 23px);
+    font-family: 'Titan One';
+    @include font (400, 20px, 23px / 20px);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ffffff;
@@ -118,7 +192,7 @@
     }
 }
 .products-text {
-    @include text('DM Sans', 700, 14px, 21px);
+    @include font (700, 14px, 21px / 14px);
     letter-spacing: 0.04em;
     text-align: center;
 
@@ -126,7 +200,16 @@
     margin-bottom: 32px;
     
     color: #FFFFFF;
+    @include tablet {
+        @include font (700, 14px, 25px / 14px);
+        width: 160px;
+    }    
     
+}
+.prod-mob-span {
+    @include tablet {
+        display: none;
+    }
 }
 .product-button {
     width: 40px;
