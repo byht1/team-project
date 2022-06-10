@@ -2,7 +2,10 @@
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 58%, rgba(255,245,246,1) 58%);
   padding: 40px 0px;
-  & .conteiner {
+  @media only screen and (min-width: 1200px) {
+    padding: 60px 0px;
+  }
+  & .container {
     padding: 0px 16px;
   }
 }
@@ -11,11 +14,18 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 3px;
+    grid-gap: 2px;
+    @media only screen and (min-width: 768px) {
+      grid-gap: 4px;
+    }
+    @media only screen and (min-width: 1200px) {
+      grid-gap: 6px;
+    }
   &__item {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
+
     &:nth-child(1) {
       grid-column: 1;
       grid-row: 2/4;
