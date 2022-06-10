@@ -1,0 +1,135 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent: #e17992;
+  --fon: #ffb8ca;
+  --accent-text: #d41443;
+  --accent-salmon: #ffa5ba;
+  --text-black: #000000;
+  --comit-fon: #907e82;
+  --focus-white: #ffffff;
+  --cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  width: 100%;
+  background-color: teal;
+  font-family: "DM Sans";
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conteiner {
+    width: 1280px;
+    padding: 0 16px;
+  }
+}
+.logo__photo {
+  width: 40px;
+}
+
+.hero {
+  background-color: var(--fon);
+  height: 444px;
+  width: 100%;
+}
+
+.circle {
+  background-color: var(--accent-salmon);
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 36px;
+}
+
+.hero-ice-cream {
+  position: absolute;
+  max-width: 171px;
+  max-height: 410px;
+}/*# sourceMappingURL=index.css.map */
