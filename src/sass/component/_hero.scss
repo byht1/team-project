@@ -4,7 +4,7 @@
   background-color: var(--fon);
   background-image: url('../images/hero/ice-cream-mob-1x.png'),
     url('../images/hero/ellipse.png');
-  background-position: 60%, 11.25% 25px;
+  background-position: 20%, 90%;
   background-repeat: no-repeat;
   background-size: 171px, 344px;
   @media (min-device-pixel-ratio: 2),
@@ -13,9 +13,9 @@
     background-image: url('../images/hero/ice-cream-mob-2x.png'),
       url('../images/hero/ellipse.png');
   }
-}
-*/
-.hero {
+} */
+
+/*.hero {
   background-color: var(--fon);
   height: 444px;
   width: 100%;
@@ -32,7 +32,41 @@
   border-radius: 50%;
   position: absolute;
   top: 25px;
-  left: 36px;
+  left: 11%;
+}
+
+ */
+.hero {
+  background-color: var(--fon);
+  height: 444px;
+  width: 100%;
+}
+.hero-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.hero-main-pic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5.63%;
+  left: 11.25%;
+}
+.hero-ice-cream {
+  position: absolute;
+  max-width: 171px;
+  max-height: 410px;
+  top: 9px;
+  left: 81px;
+}
+.hero-main-pic::before {
+  content: '';
+  display: block;
+  background-color: var(--accent-salmon);
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
 }
 
 .hero-ice-cream {
