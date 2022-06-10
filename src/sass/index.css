@@ -1,0 +1,511 @@
+@charset "UTF-8";
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent: #e17992;
+  --fon: #ffb8ca;
+  --accent-text: #d41443;
+  --accent-salmon: #ffa5ba;
+  --text-black: #000000;
+  --comit-fon: #907e82;
+  --focus-white: #ffffff;
+  --cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  width: 100%;
+  background-color: teal;
+  font-family: "DM Sans";
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.conteiner {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conteiner {
+    width: 1280px;
+  }
+}
+.logo__photo {
+  width: 40px;
+}
+
+.section-products {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.products-item {
+  display: block;
+  max-width: 280px;
+  height: 489px;
+  background-color: #FFB8CA;
+  padding-top: 160px;
+  padding-bottom: 40px;
+}
+
+.products-top-text {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  font-family: "Titan One";
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFA5BA;
+  padding-bottom: 15px;
+}
+
+.products-top-title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.1470588235;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  padding-bottom: 140px;
+}
+
+.customer {
+  background-color: #FAFAFA;
+  padding-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0);
+  overflow: hidden;
+}
+
+.box-man {
+  padding: 30px 50px 17px 53px;
+}
+
+.customer-pic {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 32px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.customer-icon {
+  position: absolute;
+}
+
+.box-text {
+  position: relative;
+  top: 13px;
+  width: 180px;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.customer-text {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 255%;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.customer-list-dot {
+  margin-bottom: 16px;
+  list-style: inside;
+  color: #C7133E;
+  display: flex;
+  justify-content: center;
+}
+
+.customer-item-dot {
+  width: 4px;
+  height: 4px;
+}
+
+.customer-title {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 186%;
+  margin-bottom: 16px;
+}
+
+.customer-list-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-item-home:not(:last-child) {
+  margin-right: 10px;
+}
+
+.customer-click {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+}
+
+.customer-click:focus {
+  background-color: #FAFAFA;
+}
+
+.customer-icon-home {
+  fill: #D31342;
+  opacity: 0;
+}
+
+.customer-icon-home:focus {
+  opacity: 1;
+}
+
+.customer-click:focus .customer-icon-home {
+  opacity: 1;
+}
+
+.box-second {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  transform: translate(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir=rtl] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir=rtl] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir=rtl] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
