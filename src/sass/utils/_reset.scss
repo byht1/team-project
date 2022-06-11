@@ -5,6 +5,10 @@ body {
   font-family: 'DM Sans';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .none {
   display: none;
 }
