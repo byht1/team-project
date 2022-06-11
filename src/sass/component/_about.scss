@@ -13,7 +13,13 @@
   font-weight: 400;
   line-height: 1.16667;
 
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.1538;
+    margin-bottom: 16px;
+  }
 }
 .section-about__title {
   padding: 0 64px 0 56px;
@@ -29,17 +35,34 @@
   line-height: 1.14706;
 
   margin-bottom: 32px;
+
+  @include tablet {
+    padding: 0;
+    font-size: 48px;
+    line-height: 1.1458;
+    margin-bottom: 40px;
+  }
 }
 .section-about .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablet {
+    flex-direction: row;
+  }
 }
 .section-about__image {
   width: 280px;
   margin-bottom: 40px;
+
+  @include tablet {
+    width: 336px;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
 }
 .info {
+  width: 320px;
   margin-left: -20px;
   margin-right: -20px;
   background-image: url('../images/how-its-made/cow-fon-mobail-320.png');
@@ -51,19 +74,37 @@
     (min-resolution: 2dppx) {
     background-image: url('../images/how-its-made/cow-fon-mobail-640.png');
   }
+
+  @include tablet {
+    width: 334px;
+    margin: 0;
+    background-image: none;
+  }
 }
 .info__list {
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    padding: 0;
+  }
 }
 .info__text {
   width: 220px;
   font-family: DM Sans;
   font-size: 12px;
   font-weight: 700;
-  line-height: 1.58333;
+  line-height: 1.5833;
   margin-bottom: 25px;
+
+  @include tablet {
+    width: 334px;
+    font-size: 14px;
+    line-height: 1.7857;
+    margin-bottom: 22px;
+  }
 }
 .info__text--color {
   width: 220px;
@@ -73,6 +114,13 @@
   line-height: 1.58333;
   margin-bottom: 10px;
   color: var(--comit-fon);
+
+  @include tablet {
+    width: 334px;
+    font-size: 14px;
+    line-height: 1.7857;
+    margin-bottom: 10px;
+  }
 }
 .info__button {
   margin-left: 20px;
@@ -80,8 +128,8 @@
   height: 44px;
   background-color: var(--focus-white);
   color: var(--accent-text);
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 37px;
+  padding-right: 37px;
   border-radius: 22px;
   align-items: center;
   font-family: DM Sans;
@@ -92,6 +140,12 @@
   transition: var(--cubic);
   justify-content: space-between;
   display: flex;
+
+  @include tablet {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3125;
+  }
 }
 .info__button--accent {
   transition: var(--cubic);
@@ -101,8 +155,8 @@
 .info__button:hover,
 .info__button:focus {
   background-color: #ecebeb;
-  // padding-left: 10px;
-  // padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .info__button-icon {
   stroke: var(--accent-text);
