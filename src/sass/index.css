@@ -717,107 +717,173 @@ section {
   grid-row: 2/4;
 }
 
-@media screen and (max-width: 767.98px) {
+.customer {
+  background-color: #FAFAFA;
+  padding-bottom: 48px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
   .customer {
-    background-color: #FAFAFA;
-    padding-bottom: 48px;
-    padding-top: 40px;
-    position: relative;
-    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  .box-slick {
-    display: flex;
-    justify-content: center;
-  }
+.box-slick {
+  display: flex;
+  justify-content: center;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0);
+  overflow: hidden;
 }
 
-@media screen and (max-width: 767.98px) {
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-            clip-path: inset(100%);
-    clip: rect(0);
-    overflow: hidden;
-  }
+.box-man {
+  display: flex;
+  justify-content: center;
 }
-
-@media screen and (max-width: 767.98px) {
-  .box-man {
-    display: flex;
-    justify-content: center;
-  }
+.customer-pic {
+  width: 85px;
+  height: 85px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 @media screen and (max-width: 767.98px) {
   .customer-pic {
-    width: 85px;
-    height: 85px;
-    margin-bottom: 32px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 75px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-pic {
+    margin-bottom: 57px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customer-pic {
+    margin-bottom: 63px;
   }
 }
 
+.customer-icon {
+  position: absolute;
+  left: 3px;
+  top: -13px;
+  z-index: -1;
+}
 @media screen and (max-width: 767.98px) {
   .customer-icon {
-    position: absolute;
+    width: 54px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-icon {
+    width: 61px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customer-icon {
+    width: 54px;
   }
 }
 
+.box-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
 @media screen and (max-width: 767.98px) {
   .box-text {
-    position: relative;
-    top: 13px;
     width: 180px;
-    text-align: center;
+    background-image: repeating-linear-gradient(#fafafa, #fafafa 28px, #e1e1e1 31px, #e1e1e1 0);
     margin-bottom: 33px;
   }
 }
+@media screen and (min-width: 768px) {
+  .box-text {
+    width: 620px;
+    background-image: repeating-linear-gradient(#fafafa, #fafafa 27px, #e1e1e1 30px, #e1e1e1 0);
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .box-text {
+    width: 821px;
+    background-image: repeating-linear-gradient(#fafafa, #fafafa 28px, #e1e1e1 31px, #e1e1e1 0);
+    margin-bottom: 47px;
+  }
+}
 
+.customer-text {
+  font-family: "DM Sans";
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (max-width: 767.98px) {
   .customer-text {
-    font-family: "DM Sans";
-    font-weight: 500;
     font-size: 12px;
     line-height: 255%;
-    border-bottom: 1px solid #E1E1E1;
+    max-width: 157px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-text {
+    font-size: 14px;
+    line-height: 216%;
+    max-width: 515px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customer-text {
+    font-size: 16px;
+    line-height: 186%;
+    max-width: 750px;
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  .customer-list-dot {
-    margin-bottom: 16px;
-    list-style: inside;
-    color: #C7133E;
-    display: flex;
-    justify-content: center;
-  }
+.customer-list-dot {
+  margin-bottom: 16px;
+  list-style: inside;
+  color: #C7133E;
+  display: flex;
+  justify-content: center;
 }
-
-@media screen and (max-width: 767.98px) {
-  .customer-item-dot {
-    width: 4px;
-    height: 4px;
-  }
+.customer-item-dot {
+  width: 4px;
+  height: 4px;
 }
-
+.customer-title {
+  font-family: "DM Sans";
+  font-weight: 500;
+  line-height: 186%;
+  margin-bottom: 16px;
+  text-align: center;
+}
 @media screen and (max-width: 767.98px) {
   .customer-title {
-    font-family: "DM Sans";
-    font-weight: 500;
     font-size: 14px;
-    line-height: 186%;
-    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-title {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .customer-title {
+    font-size: 20px;
+    margin-bottom: 32px;
   }
 }
 
@@ -827,46 +893,36 @@ section {
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  .slick-dots {
-    position: absolute;
-    bottom: -25px;
-    list-style: none;
-    display: block;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .slick-dots li {
-    position: relative;
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    background-position: center;
-    padding: 0;
-    cursor: pointer;
-  }
-  .slick-dots li:not(:last-child) {
-    margin-right: 18px;
-  }
-  .slick-dots li button {
-    border: 0;
-    background-color: #D9D9D9;
-    border-radius: 50%;
-    display: block;
-    height: 12px;
-    width: 12px;
-    outline: none;
-    line-height: 0px;
-    font-size: 0px;
-    color: transparent;
-    padding: 5px;
-    cursor: pointer;
-  }
-  .slick-dots li button:focus {
-    background-color: #FAFAFA;
-  }
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li:not(:last-child) {
+  margin-right: 18px;
+}
+.slick-dots li button {
+  font-size: 0px;
+}
+.slick-dots li {
+  background-image: url(../images/people/Ellipse.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slick-dots li.slick-active {
