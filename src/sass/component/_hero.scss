@@ -1,84 +1,60 @@
-/*.hero {
-  height: 444px;
-  width: 100%;
-  background-color: var(--fon);
-  background-image: url('../images/hero/ice-cream-mob-1x.png'),
-    url('../images/hero/ellipse.png');
-  background-position: 20%, 90%;
-  background-repeat: no-repeat;
-  background-size: 171px, 344px;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/hero/ice-cream-mob-2x.png'),
-      url('../images/hero/ellipse.png');
-  }
-} */
-
-/*.hero {
-  background-color: var(--fon);
-  height: 444px;
-  width: 100%;
-}
-.hero-container {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.circle {
-  background-color: var(--accent-salmon);
-  width: 346px;
-  height: 344px;
-  border-radius: 50%;
-  position: absolute;
-  top: 25px;
-  left: 11%;
-}
- */
 .hero {
   background-color: var(--fon);
   height: 444px;
   width: 100%;
-}
-.hero-container {
-  height: 100%;
+
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    overflow: visible;
+    height: 315px;
+  }
+}
+
+.hero-container {
   position: relative;
-}
-.hero-main-pic {
-  width: 100%;
   height: 100%;
-  position: absolute;
-  top: 5.63%;
-  left: 11.25%;
 }
-.hero-ice-cream {
-  position: absolute;
-  max-width: 171px;
-  max-height: 410px;
-  top: 9px;
-  left: 81px;
-}
-.hero-main-pic::before {
+
+.hero-container::after {
   content: '';
+  position: absolute;
   display: block;
   background-color: var(--accent-salmon);
   width: 346px;
   height: 344px;
   border-radius: 50%;
+  left: 50%;
+  transform: translate(-36%);
+  bottom: 75px;
+  @media screen and (min-width: 768px) {
+    width: 335px;
+    height: 333px;
+    bottom: 40px;
+  }
 }
 
 .hero-ice-cream {
-  position: absolute;
   max-width: 171px;
   max-height: 410px;
-  top: 9px;
-  left: 81px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-25%);
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    max-width: 143px;
+    max-height: 336px;
+  }
 }
 
 .hero__content {
   position: absolute;
   top: 136px;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    top: 0;
+  }
 }
 
 .hero__title {
@@ -87,11 +63,18 @@
   color: var(--focus-white);
   max-width: 218px;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    @include text('Titan One', 400, 22px, 25px);
+    max-width: 162px;
+  }
 }
 
 .title__accent {
   @include text('Titan One', 400, 48px, 46px);
   color: var(--accent-text);
+  @media screen and (min-width: 768px) {
+    @include text('Titan One', 400, 34px, 30px);
+  }
 }
 
 .hero__button-list {
@@ -99,12 +82,72 @@
 }
 
 .hero__button-item {
+  @include transition();
   border-radius: 20px;
-
   background-color: var(--accent-text);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-color);
+  }
   &--inverse {
     background-color: var(--focus-white);
+    &:hover,
+    &:focus {
+      background-color: var(--inverse-hover-btn-color);
+    }
   }
+}
+/*------------------------------NUMBERS-------------------------------*/
+.hero__numb {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    right: 33px;
+    top: -4px;
+    text-align: right;
+    width: 51px;
+    height: 103px;
+  }
+}
+
+.hero__second-text-numb {
+  position: absolute;
+  @include text('Titan One', 400, 28px, 32px);
+  color: var(--accent-text);
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero__second-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include text('DM Sans', 400, 8px, 10px);
+  color: var(--focus-white);
+}
+
+.numb__item {
+  position: absolute;
+  width: 51px;
+  height: 43px;
+  &--second {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.numb__item::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--focus-white);
+  position: absolute;
+  top: -2px;
+  right: -8px;
 }
 
 .hero__button {
@@ -119,4 +162,56 @@
 
 .hero__button-item + .hero__button-item {
   margin-left: 8px;
+}
+
+.hero-milk {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    max-width: 152px;
+    position: absolute;
+    bottom: 17;
+    z-index: 1;
+  }
+}
+
+.hero__discrip {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 114px;
+    bottom: 57px;
+    left: 183px;
+    @include text('DM Sans', 400, 8px, 12px);
+    color: var(--focus-white);
+  }
+}
+
+.hero__button-arrow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--focus-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.button-arrow {
+  fill: var(--accent-text);
+}
+
+.hero-tasty {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    width: 190px;
+    position: absolute;
+    bottom: 0;
+    right: 33px;
+    z-index: 1;
+  }
 }
