@@ -2,6 +2,20 @@
   padding: 40px 0;
   background-color: #fff5f6;
   position: relative;
+
+  background-image: url('../images/how-its-made/cow-fon-mobail-320.png');
+  background-repeat: no-repeat;
+  background-position: 0% 73%;
+  background-size: 100%;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/how-its-made/cow-fon-mobail-640.png');
+  }
+
+  @include tablet {
+    background-image: none;
+  }
 }
 .section-about__text {
   text-align: center;
@@ -62,33 +76,17 @@
   }
 }
 .info {
-  width: 320px;
-  margin-left: -20px;
-  margin-right: -20px;
-  background-image: url('../images/how-its-made/cow-fon-mobail-320.png');
-  background-repeat: no-repeat;
-  background-position: 0% 30%;
-  background-size: 100%;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/how-its-made/cow-fon-mobail-640.png');
-  }
+  width: 280px;
 
   @include tablet {
     width: 334px;
-    margin: 0;
-    background-image: none;
   }
 }
 .info__list {
   margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @include tablet {
     margin-bottom: 40px;
-    padding: 0;
   }
 }
 .info__text {
@@ -123,7 +121,6 @@
   }
 }
 .info__button {
-  margin-left: 20px;
   width: 176px;
   height: 44px;
   background-color: var(--focus-white);
@@ -142,7 +139,6 @@
   display: flex;
 
   @include tablet {
-    margin: 0;
     font-size: 16px;
     line-height: 1.3125;
   }
