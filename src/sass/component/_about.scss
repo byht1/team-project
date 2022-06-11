@@ -40,8 +40,8 @@
   margin-bottom: 40px;
 }
 .info {
-  // position: absolute;
-  // // left: 0;
+  margin-left: -20px;
+  margin-right: -20px;
   background-image: url('../images/how-its-made/cow-fon-mobail-320.png');
   background-repeat: no-repeat;
   background-position: 0% 30%;
@@ -54,6 +54,8 @@
 }
 .info__list {
   margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .info__text {
   width: 220px;
@@ -73,6 +75,7 @@
   color: var(--comit-fon);
 }
 .info__button {
+  margin-left: 20px;
   width: 176px;
   height: 44px;
   background-color: var(--focus-white);
@@ -86,7 +89,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.2857;
-  // transition: var(--cubic);
+  transition: var(--cubic);
   justify-content: space-between;
   display: flex;
 }
