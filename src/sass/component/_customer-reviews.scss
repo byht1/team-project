@@ -1,23 +1,27 @@
 .customer {
-    @media screen and (max-width: 767.98px) {
-   
     background-color: #FAFAFA;
     padding-bottom: 48px;
-    position: relative;
+    padding-top: 40px;
+    // position: relative;
     overflow: hidden;
-    
+    @media screen and (max-width: 767.98px) {
+
+}
+@media screen and (min-width: 1280px){
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 }
 
 .box-slick {
-    @media screen and (max-width: 767.98px) {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 767.98px) {
+    
 }
 }
 
 .visually-hidden {
-    @media screen and (max-width: 767.98px) {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -29,82 +33,142 @@
     clip: rect(0000);
     overflow: hidden;
 }
-}
 
 .box-man {
-    @media screen and (max-width: 767.98px){
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 767.98px){
+
 }
 }
 
 .customer-pic {
-    @media screen and (max-width: 767.98px) {
     width: 85px;
     height: 85px;
-    margin-bottom: 32px;
+    border-radius: 50%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 75px;
+}
+@media screen and (min-width: 768px) {
+    margin-bottom: 57px;
+}
+@media screen and (min-width: 1280px) {
+    margin-bottom: 63px;
 }
 }
 
-
+// .box-alig {
+//     position: relative;
+//     justify-content: center;
+// }
 
 .customer-icon {
-    @media screen and (max-width: 767.98px) {
     position: absolute;
+    left: 3px;
+    top: -13px;
+    z-index: -1;
+    @media screen and (max-width: 767.98px) {
+        width: 54px;
+}
+@media screen and (min-width: 768px) {
+    width: 61px;
+}
+@media screen and (min-width: 1280px) {
+    width: 54px;
 }
 }
 
 .box-text {
-    @media screen and (max-width: 767.98px) {
     position: relative;
-    top: 13px;
-    width: 180px;
+    // top: 13px;
+    
     text-align: center;
-    margin-bottom: 33px;
+
+    z-index: 2;
+    @media screen and (max-width: 767.98px) {
+        width: 180px;
+        background-image: repeating-linear-gradient(#fafafa,#fafafa 28px,#e1e1e1 31px,#e1e1e1 0);
+        margin-bottom: 33px;
+}
+@media screen and (min-width: 768px) {
+    width: 620px;
+    background-image: repeating-linear-gradient(#fafafa,#fafafa 27px,#e1e1e1 30px,#e1e1e1 0);
+    margin-bottom: 36px;
+}
+@media screen and (min-width: 1280px) {
+    width: 821px;
+    background-image: repeating-linear-gradient(#fafafa,#fafafa 28px,#e1e1e1 31px,#e1e1e1 0);
+    margin-bottom: 47px;
 }
 }
 
 .customer-text {
-    @media screen and (max-width: 767.98px) {
     font-family: 'DM Sans';
-font-weight: 500;
-font-size: 12px;
-line-height: 255%;
-border-bottom: 1px solid #E1E1E1;
+    font-weight: 500;
+
+    margin-left: auto;
+    margin-right: auto;
+    // border-bottom: 1px solid #E1E1E1;
+    @media screen and (max-width: 767.98px) {
+        font-size: 12px;
+        line-height: 255%;
+        max-width: 157px;
+
+}
+@media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 216%;
+    max-width: 515px;
+}
+@media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 186%;
+    max-width: 750px;
 }
 }
 
 .customer-list-dot {
-    @media screen and (max-width: 767.98px) {
     margin-bottom: 16px;
     list-style: inside;
     color:#C7133E;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 767.98px) {
+
 }
 }
 
 
 .customer-item-dot {
-    @media screen and (max-width: 767.98px) {
     width: 4px;
     height: 4px;
+   
+    @media screen and (max-width: 767.98px) {
+
 }
 }
 
 
 
 .customer-title {
-    @media screen and (max-width: 767.98px) {
     font-family: 'DM Sans';
-font-weight: 500;
-font-size: 14px;
-line-height: 186%;
-    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 186%;
+        margin-bottom: 16px;
+        text-align: center;
+        @media screen and (max-width: 767.98px) {
+        font-size: 14px;
     
+}
+@media screen and (min-width: 768px) {
+    font-size: 16px;
+}
+@media screen and (min-width: 1280px) {
+    font-size: 20px;
+    margin-bottom: 32px;
 }
 }
 
@@ -164,7 +228,7 @@ line-height: 186%;
 }
 
 .slick-dots {
-    @media screen and (max-width: 767.98px) {
+    
     position: absolute;
     bottom: -25px;
     list-style: none;
@@ -179,7 +243,7 @@ line-height: 186%;
         display: inline-block;
         height: 12px;
         width: 12px;
-        background-image: url(E:\team-project\src\images\people/home.png);
+        
         background-position: center;
         padding: 0;
         cursor: pointer;
@@ -188,22 +252,44 @@ line-height: 186%;
         }
         button {
             
-            border: 0;
-            background-color: #D9D9D9;
-            border-radius: 50%;
-            display: block;
-            height: 12px;
-            width: 12px;
-            outline: none;
-            line-height: 0px;
+            // border: 0;
+            // background-color: #D9D9D9;
+            // border-radius: 50%;
+            // display: block;
+            // height: 12px;
+            // width: 12px;
+            // outline: none;
+            // line-height: 0px;
             font-size: 0px;
-            color: transparent;
-            padding: 5px;
-            cursor: pointer;
-            &:focus {
-                background-color: #FAFAFA;
+            // color: transparent;
+            // padding: 5px;
+            // cursor: pointer;
+            // &:focus {
+            //     background-color: #FAFAFA;
+            // }
             }
-            }
+        }
+        @media screen and (max-width: 767.98px) {
+        }
+    }
+   
+.slick-dots li {
+    background-image: url(../images/people/Ellipse.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-dots li.slick-active {
+    // background-color: #C7133E;
+  
+    background-image: url(../images/people/home.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
             // &:hover, &:focus {
             //     outline: none;
             //     &:before {
@@ -226,11 +312,11 @@ line-height: 186%;
             //     -webkit-font-smoothing: antialiased;
             //     -moz-osx-font-smoothing: grayscale;
             // }
-        }
+        
         // &.slick-active button:before {
         //     color: $slick-dot-color-active;
         //     opacity: $slick-opacity-default;
         // }
        
-    }
-}
+    
+
