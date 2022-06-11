@@ -76,6 +76,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footer-cont {
+    padding-top: 20px;
+  }
+
   .footer-box {
     display: flex;
     justify-content: space-between;
@@ -98,5 +102,33 @@
   .footer-text {
     @include text('DM Sans', 700, 14px, 26px);
     text-align: right;
+  }
+
+  .copyright-text {
+    width: auto;
+    padding: 8px 0;
+
+    @include text('DM Sans', 700, 14px, 26px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-cont {
+    padding-top: 60px;
+  }
+
+  .title-first {
+    width: auto;
+    @include text('Titan One', 400, 30px, 34px);
+  }
+
+  .title-second {
+    margin-top: 16px;
+    width: auto;
+    @include text('Titan One', 400, 58px, 66px);
+  }
+
+  .footer-text {
+    @include text('DM Sans', 700, 16px, 30px);
   }
 }
