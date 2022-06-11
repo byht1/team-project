@@ -5,6 +5,9 @@
         padding-top: 40px;
         padding-bottom: 60px;
     }
+    @include desktop {
+        padding-top: 60px;
+    }
     & .container {
         @media screen and (max-width: 767px) {
             max-width: 377px;
@@ -12,36 +15,45 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     } 
 }
 .products-top-text {
     font-family: 'Titan One';
     @include font (null, 18px, 21px / 18px);
-    @include tablet {
-        @include font (null, 26px, 30px / 26px);
-    }
     text-transform: uppercase;
 
     color: var(--accent-salmon);
     margin-bottom: 15px;
+
     @include tablet {
+        @include font (null, 26px, 30px / 26px);
         margin-bottom: 18px;
+    }
+
+    @include desktop {
+        @include font (null, 30px, 34px / 30px);
+        margin-bottom: 16px;
     }
 }
 
 .products-top-title {
     font-family: 'Titan One';
     @include font (400, 34px, 39px / 34px);
-    @include tablet {
-        @include font (null, 48px, 55px / 48px);
-    }
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: var(--accent-text);
-    margin-bottom: 140px;
+    margin-bottom: 148px;
+
     @include tablet {
+        @include font (null, 48px, 55px / 48px);
         margin-bottom: 154px;
+    }
+
+    @include desktop {
+        @include font (null, 58px, 66px / 58px);
+        margin-bottom: 258px;
     }
 }
 .products-list {
@@ -49,6 +61,9 @@
     @include tablet {
         display: flex;
         margin-left: -16px;
+    }
+    @include desktop {
+        margin-left: -32px;
     }
 }
 .products-item {
@@ -78,6 +93,12 @@
         height: 473px;
         padding: 118px 32px 40px;
     }
+    @include desktop {
+        flex-basis: calc(100% / 3 - 32px);
+        margin-left: 32px;
+        height: 535px;
+        padding: 165px 32px 60px;
+    }
 
 
     &::before {
@@ -93,11 +114,15 @@
         height: 280px;
         background-color: transparent;
         @include tablet {
-            top: -154px;
+            top: -138px;
             width: 224px;
             height: 224px;
         }
-
+        @include desktop {
+            top: -260px;
+            width: 394px;
+            height: 394px;
+        }
 
     }
     
@@ -122,7 +147,16 @@
                     (min-resolution: 2dppx) {
                         background-image: url('../images/products/ice-cream/ice-cream-tablet-440-min.png');
                     }
-            }    
+            }
+            @include desktop {
+                background-image: url('../images/products/ice-cream/ice-cream-desktop-335-min.png');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/products/ice-cream/ice-cream-desktop-670-min.png');
+                }
+            }
         }
     }
     &.second {
@@ -145,6 +179,15 @@
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
                     background-image: url('../images/products/ice-coffee/ice-coffee-tablet-440-min.png');
+                }
+            }
+            @include desktop {
+                background-image: url('../images/products/ice-coffee/ice-coffee-desktop-335-min.png');
+
+                @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/products/ice-coffee/ice-coffee-desktop-670-min.png');
                 }
             }
         }
@@ -171,6 +214,15 @@
                     background-image: url('../images/products/milkshakes/milkshakes-tablet-440-min.png');
                 }
             }
+                @include desktop {
+                    background-image: url('../images/products/milkshakes/milkshakes-desktop-335-min.png');
+    
+                    @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url('../images/products/milkshakes/milkshakes-desktop-670-min.png');
+                    }
+                }
         }
     }
 }
@@ -184,6 +236,10 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include desktop {
+        @include font (null, 30px, 34px / 30px);
+    }
 
     &:after {
         position: absolute;
@@ -206,8 +262,13 @@
     color: #FFFFFF;
     @include tablet {
         @include font (700, 14px, 25px / 14px);
-        width: 160px;
+        max-width: 160px;
     }    
+    @include desktop {
+        @include font (700, 16px, 28px / 16px);
+        max-width: 245px;
+        margin-bottom: 60px;
+    }
     
 }
 .prod-mob-span {
