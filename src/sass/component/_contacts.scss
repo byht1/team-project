@@ -3,50 +3,86 @@
     padding-bottom: 24px;
     background: linear-gradient(rgba(255, 255, 255, 1) 0%,
         rgba(255, 255, 255, 1) 26%,rgba(255,245,246,1) 26%, rgba(255,245,246,1) 100%);
+    @include tablet{
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
 }
-.contacts-section .conteiner{
+.contacts-section .container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .contacts-list {
     display: grid;
-}
-.contacts-list__contact{
-    & + &{
-        margin-top: 20px;
+    grid-row-gap: 20px;
+    @include tablet {
+        grid-row-gap: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 32px;
     }
 }
 .contact {
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     padding: 40px 32px;
 }
 .contact--light{
     background: var(--focus-white);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 }
 .contact__category-wrap {
     @include flexCenter;
     height: 16px;
     border-radius: 4px;
+    @include tablet{
+        height: 28px;
+    }
+}
+.contact__category {
+    @include text($a:500,$b:12px,$c:22px);
+    letter-spacing: 0.04em;
+    @include tablet{
+        @include text($a: 500, $b: 16px, $c: 30px);
+    }
+}
+
+.contact__category--light {
+    color:var(--focus-white);
 }
 .contact__category-wrap--cafe {
-    max-width: 80px;
+    width: 80px;
     background: var(--dull-yellow);
+    @include tablet {
+        width: 73px;
+    }
 }
 .contact__category-wrap--foodtruck {
-    max-width: 130px;
+    width: 130px;
     background: var(--dull-green);
+    @include tablet {
+        width: 138px;
+    }
 }
 .loc__info{
     margin-top: 20px;
     & p{
         margin-top: 8px;
     }
+    @include tablet{
+        & p{
+            margin-top: 12px;
+        }
+        margin-top: 32px;
+    }
 }
 .contact__work-time{
     & div + div{
          margin-top: 8px;
+    }
+    @include tablet{
+        & div + div{
+            margin-top: 12px;
+        }
     }
 }
 .contact__links{
@@ -61,17 +97,20 @@
     }
 }
 .contact__title {
-    @include text($a:700,$b:12px,$c:22px);
+    @include text($a:500,$b:12px,$c:22px);
     letter-spacing: 0.04em;
+    @include tablet{
+        @include text($a: 500,$b: 14px, $c: 26px);
+    }
 }
 .contact__title--dark {
     color: var(--text-black);
 }
-.contact__title--light{
-    color:var(--focus-white);
-}
 .contact__text {
-    @include text($a: 700, $b: 12px, $c: 22px);
+    @include text($a: 500, $b: 12px, $c: 22px);
+    @include tablet{
+        @include text($a: 500,$b: 14px, $c: 23px);
+    }
 }
 .contact__text--light {
     color:var(--accent-salmon);
@@ -83,13 +122,27 @@
     border: 1px solid #E1E1E1;
     margin-top: 24px;
     margin-bottom: 24px;
+    @include tablet{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
 }
 .contacts-btn-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     margin-top: 32px;
     width:161px;
+    height: 98px;
+    @include tablet{
+        width: 380px;
+        height: 44px;
+        margin-top: 40px;
+        flex-direction: row;
+    }
 }
 .contacts-btn{
-    transition: var(--cubic);
+    transition: background-color var(--cubic),padding-left var(--cubic),padding-right var(--cubic);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,13 +150,28 @@
     height: 44px;
     border-radius: 22px;
     @include text($a:700,$b:16px,$c:21px);
-    & + &{
-        margin-top: 10px;
-    }
     &:focus,
-    &:hover{
+    &:hover {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+.contacts-btn--dark {
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: var(--accent-bg);
+    color: var(--focus-white);
+    & .contacts_icon-arrow {
+        stroke: var(--focus-white);
+    }
+    &:focus,
+    &:hover {
+        background-color: var(--darker-accent-bg);
+    }
+    @include tablet {
+        width: 191px;
+        padding-left: 30px;
+        padding-right: 34px;
     }
 }
 .contacts-btn--light{
@@ -118,18 +186,10 @@
     &:hover{
         background-color: var(--focus-gray);
     }
-}
-.contacts-btn--dark {
-    padding-left: 17px;
-    padding-right: 17px;
-    background-color: var(--accent-bg);
-    color: var(--focus-white);
-    & .contacts_icon-arrow{
-        stroke:var(--focus-white);
-    }
-    &:focus,
-    &:hover{
-        background-color: var(--darker-accent-bg);
+    @include tablet{
+        width: 174px;
+        padding-left: 38px;
+        padding-right: 38px;
     }
 }
 .contacts_icon-arrow{
