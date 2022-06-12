@@ -7,7 +7,6 @@ let a = 0;
 
 refs.sction.addEventListener('click', event => {
   const name = event.target.nodeName;
-  console.log('🚀 ~ name', name);
 
   if (name !== 'BUTTON' && name !== 'svg') {
     if (a > 0) {
