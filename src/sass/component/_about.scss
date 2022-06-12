@@ -16,6 +16,19 @@
   @include tablet {
     background-image: none;
   }
+
+  @include desktop {
+    padding: 60px;
+    background-image: url('../images/how-its-made/cow-fon-desctop-1280.png');
+    background-repeat: no-repeat;
+    background-position: 0% 95%;
+    background-size: 100%;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/how-its-made/cow-fon-desctop-2560.png');
+    }
+  }
 }
 .section-about__text {
   text-align: center;
@@ -33,6 +46,11 @@
     font-size: 26px;
     line-height: 1.1538;
     margin-bottom: 16px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.1333;
   }
 }
 .section-about__title {
@@ -54,7 +72,13 @@
     padding: 0;
     font-size: 48px;
     line-height: 1.1458;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.1379;
+    margin-bottom: 88px;
   }
 }
 .section-about .container {
@@ -65,7 +89,7 @@
     flex-direction: row;
   }
 }
-.section-about__image {
+.section-about__picture {
   width: 280px;
   margin-bottom: 40px;
 
@@ -74,12 +98,20 @@
     margin-right: 32px;
     margin-bottom: 0;
   }
+  @include desktop {
+    width: 501px;
+    margin-right: 139px;
+  }
 }
 .info {
   width: 280px;
 
   @include tablet {
     width: 334px;
+  }
+
+  @include desktop {
+    width: 463px;
   }
 }
 .info__list {
@@ -103,6 +135,16 @@
     line-height: 1.7857;
     margin-bottom: 22px;
   }
+
+  @include desktop {
+    width: 457px;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+}
+.info__item--margin .info__text--margin {
+  margin-bottom: 0;
 }
 .info__text--color {
   width: 220px;
@@ -110,14 +152,18 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.58333;
-  margin-bottom: 10px;
   color: var(--comit-fon);
+  margin-bottom: 10px;
 
   @include tablet {
     width: 334px;
     font-size: 14px;
     line-height: 1.7857;
-    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    width: 457px;
+    line-height: 1.9285;
   }
 }
 .info__button {

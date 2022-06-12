@@ -2,6 +2,10 @@
   padding: 40px 0;
   background-color: #fff5f6;
   position: relative;
+
+  @include desktop {
+    padding: 60px 0;
+  }
 }
 .section-advantages .container {
   display: flex;
@@ -9,13 +13,14 @@
   align-items: center;
   width: 320px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
+    flex-direction: row;
     width: 768px;
     padding: 0 16px;
   }
-
-  @include tablet {
-    flex-direction: row;
+  @include desktop {
+    width: 1280px;
+    display: block;
   }
 }
 .advantages-list {
@@ -48,14 +53,17 @@
       margin-bottom: 0;
     }
   }
+  &:first-child {
+    margin-left: 0;
+  }
 
   @include tablet {
     flex-basis: calc(100% / 3);
     padding-top: 86px;
+  }
 
-    &:first-child {
-      margin-left: 0;
-    }
+  @include desktop {
+    flex-basis: calc(100% / 3);
   }
 }
 .advantages-list__text {
@@ -67,6 +75,14 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.7142;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  @include desktop {
+    width: 260px;
   }
 }
 .advantages-list__number {
@@ -84,6 +100,11 @@
   @include tablet {
     font-size: 48px;
     line-height: 1.1457;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.1379;
   }
 }
 .first-advantages::before {
