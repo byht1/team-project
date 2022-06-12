@@ -1,11 +1,16 @@
 .customer {
-    background-color: #FAFAFA;
+    
     padding-bottom: 48px;
     padding-top: 40px;
     // position: relative;
     overflow: hidden;
     @media screen and (max-width: 767.98px) {
-
+        padding-top: 40px;
+        padding-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 @media screen and (min-width: 1280px){
     padding-top: 60px;
@@ -17,7 +22,6 @@
     display: flex;
     justify-content: center;
     @media screen and (max-width: 767.98px) {
-    
 }
 }
 
@@ -37,9 +41,31 @@
 .box-man {
     display: flex;
     justify-content: center;
+    background-color: #FAFAFA;
     @media screen and (max-width: 767.98px){
 
 }
+}
+
+
+.box-text::before {
+    content: "";
+    background-image: url(../images/people/kav-2x.png);
+    width: 54px;
+    height: 40px;
+    position: absolute;
+    left: 3px;
+    top:-15px;
+    background-size: 54px 40px;
+    z-index:-1;
+    @media screen and (min-width: 768px) {
+        background-size: 60px 40px;
+        width: 60px;
+    }
+    @media screen and (min-width: 1280px) {
+        background-size: 54px 40px;
+        width: 54px;
+    }
 }
 
 .customer-pic {
@@ -60,10 +86,6 @@
 }
 }
 
-// .box-alig {
-//     position: relative;
-//     justify-content: center;
-// }
 
 .customer-icon {
     position: absolute;
@@ -91,17 +113,17 @@
     @media screen and (max-width: 767.98px) {
         width: 180px;
         background-image: repeating-linear-gradient(#fafafa,#fafafa 28px,#e1e1e1 31px,#e1e1e1 0);
-        margin-bottom: 33px;
+        margin-bottom: 53px;
 }
 @media screen and (min-width: 768px) {
     width: 620px;
     background-image: repeating-linear-gradient(#fafafa,#fafafa 27px,#e1e1e1 30px,#e1e1e1 0);
-    margin-bottom: 36px;
+    margin-bottom: 60px;
 }
 @media screen and (min-width: 1280px) {
     width: 821px;
-    background-image: repeating-linear-gradient(#fafafa,#fafafa 28px,#e1e1e1 31px,#e1e1e1 0);
-    margin-bottom: 47px;
+    background-image: repeating-linear-gradient(#fafafa,#fafafa 27px,#e1e1e1 30px,#e1e1e1 0);
+    margin-bottom: 75px;
 }
 }
 
@@ -114,44 +136,41 @@
     // border-bottom: 1px solid #E1E1E1;
     @media screen and (max-width: 767.98px) {
         font-size: 12px;
-        line-height: 255%;
+        line-height: 258%;
         max-width: 157px;
 
 }
 @media screen and (min-width: 768px) {
     font-size: 14px;
-    line-height: 216%;
+    line-height: 214%;
     max-width: 515px;
 }
 @media screen and (min-width: 1280px) {
     font-size: 16px;
-    line-height: 186%;
+    line-height: 187%;
     max-width: 750px;
-}
-}
-
-.customer-list-dot {
-    margin-bottom: 16px;
-    list-style: inside;
-    color:#C7133E;
-    display: flex;
-    justify-content: center;
-    @media screen and (max-width: 767.98px) {
-
+  
 }
 }
 
 
-.customer-item-dot {
-    width: 4px;
-    height: 4px;
-   
-    @media screen and (max-width: 767.98px) {
 
+.relative {
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+     @media screen and (max-width: 767.98px) {
+        max-width: 280px;
+    
+}
+@media screen and (min-width: 768px) {
+    max-width: 620px;
+}
+@media screen and (min-width: 1280px){
+    max-width: 1034px;
 }
 }
-
-
 
 .customer-title {
     font-family: 'DM Sans';
@@ -169,6 +188,23 @@
 @media screen and (min-width: 1280px) {
     font-size: 20px;
     margin-bottom: 32px;
+}
+}
+
+.customer-title::before {
+    content: url(../images/people/Group-8@1x.png);
+    position: absolute;
+    top: -31px;
+    
+    @media screen and (max-width: 767.98px) {
+        left: 124px;
+    
+}
+@media screen and (min-width: 768px) {
+    left: 294px;
+}
+@media screen and (min-width: 1280px){
+    left: 501px;
 }
 }
 
