@@ -1350,6 +1350,25 @@ section {
   justify-content: center;
   background-color: #FAFAFA;
 }
+@media screen and (max-width: 767.98px) {
+  .box-man {
+    padding-top: 43px;
+    padding-bottom: 17px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .box-man {
+    padding-bottom: 37px;
+    padding-top: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .box-man {
+    padding-bottom: 31px;
+    padding-top: 47px;
+  }
+}
+
 .box-text::before {
   content: "";
   background-image: url(../images/people/kav-2x.png);
@@ -1384,17 +1403,17 @@ section {
 }
 @media screen and (max-width: 767.98px) {
   .customer-pic {
-    margin-bottom: 75px;
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
   .customer-pic {
-    margin-bottom: 57px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
   .customer-pic {
-    margin-bottom: 63px;
+    margin-bottom: 16px;
   }
 }
 
@@ -1429,21 +1448,18 @@ section {
   .box-text {
     width: 180px;
     background-image: repeating-linear-gradient(#fafafa, #fafafa 28px, #e1e1e1 31px, #e1e1e1 0);
-    margin-bottom: 53px;
   }
 }
 @media screen and (min-width: 768px) {
   .box-text {
     width: 620px;
     background-image: repeating-linear-gradient(#fafafa, #fafafa 27px, #e1e1e1 30px, #e1e1e1 0);
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1280px) {
   .box-text {
     width: 821px;
     background-image: repeating-linear-gradient(#fafafa, #fafafa 27px, #e1e1e1 30px, #e1e1e1 0);
-    margin-bottom: 75px;
   }
 }
 
@@ -1483,16 +1499,23 @@ section {
 @media screen and (max-width: 767.98px) {
   .relative {
     max-width: 280px;
+    margin-top: 16px;
+    padding-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
   .relative {
     max-width: 620px;
+    padding-top: 24px;
+    margin-bottom: 32px;
+    margin-top: 4px;
   }
 }
 @media screen and (min-width: 1280px) {
   .relative {
     max-width: 1034px;
+    padding-top: 20px;
+    margin-top: 16px;
   }
 }
 
@@ -1500,7 +1523,6 @@ section {
   font-family: "DM Sans";
   font-weight: 500;
   line-height: 186%;
-  margin-bottom: 16px;
   text-align: center;
 }
 @media screen and (max-width: 767.98px) {
@@ -1516,28 +1538,29 @@ section {
 @media screen and (min-width: 1280px) {
   .customer-title {
     font-size: 20px;
-    margin-bottom: 32px;
   }
 }
 
 .customer-title::before {
   content: url(../images/people/Group-8@1x.png);
   position: absolute;
-  top: -31px;
 }
 @media screen and (max-width: 767.98px) {
   .customer-title::before {
     left: 124px;
+    top: -13px;
   }
 }
 @media screen and (min-width: 768px) {
   .customer-title::before {
     left: 294px;
+    top: -17px;
   }
 }
 @media screen and (min-width: 1280px) {
   .customer-title::before {
     left: 501px;
+    top: -21px;
   }
 }
 

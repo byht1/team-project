@@ -43,7 +43,16 @@
     justify-content: center;
     background-color: #FAFAFA;
     @media screen and (max-width: 767.98px){
-
+padding-top: 43px;
+padding-bottom: 17px;
+}
+@media screen and (min-width: 768px){
+    padding-bottom: 37px;
+    padding-top: 36px;
+}
+@media screen and (min-width: 1280px){
+    padding-bottom: 31px;
+    padding-top: 47px;
 }
 }
 
@@ -76,13 +85,13 @@
     margin-left: auto;
     margin-right: auto;
     @media screen and (max-width: 767.98px) {
-        margin-bottom: 75px;
+        margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
-    margin-bottom: 57px;
+    margin-bottom: 20px;
 }
 @media screen and (min-width: 1280px) {
-    margin-bottom: 63px;
+    margin-bottom: 16px;
 }
 }
 
@@ -113,17 +122,17 @@
     @media screen and (max-width: 767.98px) {
         width: 180px;
         background-image: repeating-linear-gradient(#fafafa,#fafafa 28px,#e1e1e1 31px,#e1e1e1 0);
-        margin-bottom: 53px;
+        // margin-bottom: 53px;
 }
 @media screen and (min-width: 768px) {
     width: 620px;
     background-image: repeating-linear-gradient(#fafafa,#fafafa 27px,#e1e1e1 30px,#e1e1e1 0);
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
 }
 @media screen and (min-width: 1280px) {
     width: 821px;
     background-image: repeating-linear-gradient(#fafafa,#fafafa 27px,#e1e1e1 30px,#e1e1e1 0);
-    margin-bottom: 75px;
+    // margin-bottom: 75px;
 }
 }
 
@@ -162,13 +171,22 @@
     margin-right: auto;
      @media screen and (max-width: 767.98px) {
         max-width: 280px;
+        margin-top: 16px;
+        padding-top: 20px;
     
 }
 @media screen and (min-width: 768px) {
     max-width: 620px;
+    padding-top: 24px;
+    margin-bottom: 32px;
+    margin-top: 4px;
+    
 }
 @media screen and (min-width: 1280px){
     max-width: 1034px;
+    padding-top: 20px;
+    margin-top: 16px;
+    
 }
 }
 
@@ -176,7 +194,7 @@
     font-family: 'DM Sans';
     font-weight: 500;
     line-height: 186%;
-        margin-bottom: 16px;
+        
         text-align: center;
         @media screen and (max-width: 767.98px) {
         font-size: 14px;
@@ -187,24 +205,27 @@
 }
 @media screen and (min-width: 1280px) {
     font-size: 20px;
-    margin-bottom: 32px;
+    
 }
 }
 
 .customer-title::before {
     content: url(../images/people/Group-8@1x.png);
     position: absolute;
-    top: -31px;
+    
     
     @media screen and (max-width: 767.98px) {
         left: 124px;
+        top: -13px;
     
 }
 @media screen and (min-width: 768px) {
     left: 294px;
+    top: -17px;
 }
 @media screen and (min-width: 1280px){
     left: 501px;
+    top: -21px;
 }
 }
 
