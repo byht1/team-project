@@ -1,0 +1,55 @@
+.backdrop {
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.493);
+  opacity: 1;
+  transition: opacity 250ms var(--cubic),visibility 250ms var(--cubic);
+} 
+
+.modal {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  max-width: calc(100% - 10px);
+  background-color: var(--focus-white);
+  transition: transform 250ms; 
+  border: 1px solid var(--accent-text);
+  @media only screen and (min-width: 1200px) {
+      width: 528px;
+      min-height: 528px;
+  }
+  
+}
+
+.is-hidden {
+opacity: 0;
+pointer-events: none;
+visibility: hidden;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  &:hover, &:focus {
+      cursor: pointer;
+  }
+}
+
+
+.modal__title {
+  font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+font-size: 58px;
+line-height: 66px;
+text-align: center;
+  color: black;
+}
