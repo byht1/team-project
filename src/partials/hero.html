@@ -1,8 +1,21 @@
 <section class="hero" id="hero">
   <div class="container hero-container">
-    <!--<div class="circle"></div> -->
-    <!--<div class="hero-main-pic"></div>-->
     <picture>
+      <source
+        srcset="
+          ./images/hero/web/ice-cream-desk-1x.webp 1x,
+          ./images/hero/web/ice-cream-desk-2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="
+          ./images/hero/ice-cream-desk-1x.png 1x,
+          ./images/hero/ice-cream-desk-2x.png 2x
+        "
+        media="(min-width:1280px)"
+      />
       <source
         srcset="
           ./images/hero/web/ice-cream-tab-1x.webp 1x,
@@ -40,7 +53,6 @@
         loading="lazy"
       />
     </picture>
-
     <div class="hero__content">
       <h2 class="hero__title">
         ice cream made with <span class="title__accent">passion</span>
@@ -69,6 +81,21 @@
     <picture>
       <source
         srcset="
+          ./images/hero/web/milk-desk-1x.webp 1x,
+          ./images/hero/web/milk-desk-2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/hero/milk-desk-1x.png 1x,
+          ./images/hero/milk-desk-2x.png 2x
+        "
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="
           ./images/hero/web/milk-tab-1x.webp 1x,
           ./images/hero/web/milk-tab-2x.webp 2x
         "
@@ -83,8 +110,8 @@
         media="(min-width:768px)"
       />
       <img
-        src="./images/hero/milk-tab-1x.png"
-        alt="ice-cream"
+        src="./images/hero/milk-desk-1x.png"
+        alt="milk-bottle"
         class="hero-milk"
         loading="lazy"
       />
@@ -94,13 +121,33 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
-      <button type="button" class="hero__button-arrow">
+      <button
+        type="button"
+        class="hero__button-arrow menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <svg width="7" height="6" class="button-arrow">
           <use href="./images/sprite.svg#arrow-right"></use>
         </svg>
       </button>
     </div>
     <picture>
+      <source
+        srcset="
+          ./images/hero/web/tasty-desk-1x.webp 1x,
+          ./images/hero/web/tasty-desk-2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="
+          ./images/hero/tasty-desk-1x.png 1x,
+          ./images/hero/tasty-desk-2x.png 2x
+        "
+        media="(min-width:1280px)"
+      />
       <source
         srcset="
           ./images/hero/web/tasty-tab-1x.webp 1x,
@@ -117,8 +164,8 @@
         media="(min-width:768px)"
       />
       <img
-        src="./images/hero/tasty-tab-1x.png"
-        alt="ice-cream"
+        src="./images/hero/tasty-desk-1x.png"
+        alt="girl eating ice-cream"
         class="hero-tasty"
         loading="lazy"
       />
