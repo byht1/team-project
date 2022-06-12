@@ -2,8 +2,8 @@
   z-index: 1002;
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.493);
   opacity: 1;
   transition: opacity 250ms var(--cubic),visibility 250ms var(--cubic);
@@ -43,10 +43,7 @@ visibility: hidden;
   }
 }
 
-.modal-form {
 
-  
-}
 .modal__title {
   font-family: 'Titan One';
 font-style: normal;
