@@ -10,16 +10,16 @@
         "
         type="image/webp"
       />
-      <img
-        class="section-about__image"
+      <source
         srcset="
           ./images/how-its-made/cow-mobail-280-min.png 1x,
           ./images/how-its-made/cow-mobail-560-min.png 2x
         "
+      />
+      <img
+        class="section-about__image"
         src="./images/how-its-made/cow-mobail-280-min.png"
         alt="A jug of milk on the background of a cow"
-        width="280"
-        height="279"
         loading="lazy"
       />
     </picture>
@@ -32,7 +32,7 @@
             erat at justo fringilla.
           </p>
         </li>
-        <li class="info__item">
+        <li class="info__item info__item--margin">
           <p class="info__text info__text--color">
             Curabitur lacinia enim at ex blandit, vel pellentesque odio
             elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
@@ -40,8 +40,8 @@
             massa nibh, tincidunt. Aliquam erat volutpat. Aenean accumsan.
           </p>
         </li>
-        <li class="info__item">
-          <p class="info__text info__text--color">
+        <li class="info__item info__item--margin">
+          <p class="info__text info__text--color info__text--margin">
             Aliquam erat volutpat. Aenean accumsan.
           </p>
         </li>
