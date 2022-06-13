@@ -30,6 +30,8 @@ refs.end.addEventListener('click', () => {
   refs.button.classList.toggle('is-open');
 });
 
+let scrol = 0;
+
 window.addEventListener(
   'scroll',
   throttle(() => {
@@ -45,27 +47,21 @@ window.addEventListener(
   }, 500)
 );
 
-function backToTop() {
-  let a = 0;
-
-  let button = $('.back-to-top');
-  $(window).on(
-    'scroll',
+$(document).ready(function () {
+  $(window).scroll(
     throttle(() => {
-      if ($(this).scrollTop() >= 50) {
-        button.fadeIn();
+      if ($(this).scrollTop() > 100) {
+        $('.back-top').fadeIn();
       } else {
-        button.fadeOut();
+        $('.back-top').fadeOut();
       }
-      a += 1;
-      console.log('🚀 ~ a', a);
+      scrol += 1;
+      console.log('🚀 ~ scrol', scrol);
     }, 500)
   );
 
-  button.on('click', () => {
-    event.preventDefault();
-    $('html').animate({ scrollTop: 0 }, 1000);
+  $('.back-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, ease);
+    return false;
   });
-}
-
-backToTop();
+});

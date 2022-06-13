@@ -182,7 +182,7 @@
     }
   }
 
-  .back-to-top {
+  .back-top {
     position: fixed;
     z-index: 900;
     right: 10px;
@@ -201,8 +201,8 @@
   //   outline: none;
   // }
 
-  .back-to-top::before,
-  .back-to-top::after {
+  .back-top::before,
+  .back-top::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -210,7 +210,7 @@
     transform: translate(-50%, -50%);
   }
 
-  .back-to-top::before {
+  .back-top::before {
     width: 5px;
     height: 25px;
     border-top-left-radius: 3px;
@@ -218,7 +218,7 @@
     background-color: #f5f0f6;
   }
 
-  .back-to-top::after {
+  .back-top::after {
     width: 15px;
     height: 15px;
     transform: translate(-50%, -60%) rotate(45deg);
