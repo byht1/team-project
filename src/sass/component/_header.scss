@@ -40,22 +40,6 @@
   background-color: transparent;
 }
 
-.header__button {
-  border-radius: 22px;
-  @include text('DM Sans', 700, 16px, 21px);
-  color: var(--accent-text);
-
-  svg {
-    margin-left: 24px;
-  }
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-}
-
 .header__button-two {
   width: 100%;
   height: 44px;
@@ -131,13 +115,46 @@
   opacity: 0;
 }
 
-@media screen and(max-width: 767px) {
+.header__button {
+  @include text('DM Sans', 700, 16px, 21px);
+  width: 176px;
+  height: 44px;
+  background-color: var(--focus-white);
+  color: var(--accent-text);
+  padding-left: 37px;
+  padding-right: 37px;
+  border-radius: 22px;
+  align-items: center;
+
+  justify-content: space-between;
+  display: flex;
+
+  transition: var(--cubic);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.3125;
+  }
+
+  svg {
+    margin-left: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and(max-width: 767.9px) {
   .header__button-one {
     display: none;
   }
 }
 
-@media screen and(max-width: 1279px) {
+@media screen and(max-width: 1279.9px) {
   .header {
     background-color: var(--fon);
   }
