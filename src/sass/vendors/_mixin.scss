@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: $a;
   font-size: $b;
-  line-height: $c / $b;
+  line-height: calc($c / $b);
   //   Приклад застосування:
   // @include text('DM Sans', 700, 16px, 21px);
   //   можна прописати так:
