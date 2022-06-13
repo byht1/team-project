@@ -1,84 +1,108 @@
-// About-modal
-.modal_about {
-  display: none;
+.backdrop-about {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 99999;
+  z-index: 50;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: teal;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal_vis {
-  display: block;
-  border-radius: 22px;
-  background-color: var(--fon);
-
-  background-image: url('../images/how-its-made/milk-fresh-mobail-320-min.png');
-  background-repeat: no-repeat;
-  background-position: 0% 73%;
-  background-size: 100%;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/how-its-made/milk-fresh-mobail-640-min.png');
-  }
-
-  @include tablet {
-    display: block;
-    border-radius: 22px;
-    background-color: var(--fon);
-
-    background-image: url('../images/how-its-made/milk-fresh-tablet-678-min.png');
-    background-repeat: no-repeat;
-    background-position: 0% 73%;
-    background-size: 100%;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/how-its-made/milk-fresh-tablet-1536-min.png');
-    }
-  }
-
-  @include desktop {
-    display: block;
-    border-radius: 22px;
-    background-color: var(--fon);
-
-    background-image: url('../images/how-its-made/milk-fresh-desktop-1280-min.png');
-    background-repeat: no-repeat;
-    background-position: 0% 73%;
-    background-size: 100%;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/how-its-made/milk-fresh-desktop-2550-min.png');
-    }
-  }
+.backdrop-about.is-hidden-about {
+  opacity: 0;
+  pointer-events: none;
 }
-.body_block {
-  overflow: hidden;
-  margin-right: 17px;
-}
-#close_modal_about {
-  color: #bfe2ff;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: Times, sans-serif;
-  border-radius: 50%;
-  border: 4px solid #bfe2ff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  margin: 20px;
-  cursor: pointer;
+.modal-about {
   position: absolute;
-  right: 0;
-  transform: rotate(45deg);
-  transition: all 0.6s;
-  box-sizing: content-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 450px;
+
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 479px) {
+    width: 95%;
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
-#close_modal_about:hover {
-  color: #fff;
-  transform: rotate(135deg);
+.modal-about__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  background-color: white;
+  cursor: pointer;
 }
+.modal-about__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// .modal_vis {
+//   border-radius: 22px;
+//   background-color: #fff5f6;
+
+//   background-image: url('../images/how-its-made/milk-fresh-mobail-320-min.png');
+//   background-repeat: no-repeat;
+//   background-position: 0% 100%;
+//   background-size: 100%;
+//   @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: url('../images/how-its-made/milk-fresh-mobail-640-min.png');
+//   }
+
+//   @include tablet {
+//     display: block;
+//     border-radius: 22px;
+//     background-color: var(--fon);
+
+//     background-image: url('../images/how-its-made/milk-fresh-tablet-678-min.png');
+//     background-repeat: no-repeat;
+//     background-position: 0% 100%;
+//     background-size: 100%;
+//     @media (min-device-pixel-ratio: 2),
+//       (min-resolution: 192dpi),
+//       (min-resolution: 2dppx) {
+//       background-image: url('../images/how-its-made/milk-fresh-tablet-1536-min.png');
+//     }
+//   }
+
+//   @include desktop {
+//     display: block;
+//     border-radius: 22px;
+//     background-color: var(--fon);
+
+//     background-image: url('../images/how-its-made/milk-fresh-desktop-1280-min.png');
+//     background-repeat: no-repeat;
+//     background-position: 0% 100%;
+//     background-size: 100%;
+//     @media (min-device-pixel-ratio: 2),
+//       (min-resolution: 192dpi),
+//       (min-resolution: 2dppx) {
+//       background-image: url('../images/how-its-made/milk-fresh-desktop-2550-min.png');
+//     }
+//   }
+// }
