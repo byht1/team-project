@@ -25,13 +25,18 @@
     background-image: url(../images/contacts/sectionbg.png);
     width: 100%;
     position: absolute;
-    margin-top: 143px;
+    margin-top: 103px;
     height: 382px;
     max-width: 1920px;
+    animation-play-state: paused;
+    animation: contacts_bg_anim 3s infinite ease-in-out alternate;
     @media (min-device-pixel-ratio: 2),
     (min-resolution:192dpi),
     (min-resolution:2dppx){
         background-image:url(../images/contacts/sectionbg-2x.png);
+    }
+    @include desktop{
+        animation-play-state: running;
     }
 }
 .contacts-section .container{
@@ -109,16 +114,25 @@
     }
 }
 .contact__work-time{
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 24px;
     & div + div{
          margin-top: 8px;
     }
     @include tablet{
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-top: 32px;
         & div + div{
             margin-top: 12px;
         }
     }
 }
 .contact__links{
+    margin-top: 24px;
     & .contact__text{
         transition: color var(--cubic), text-shadow var(--cubic);
         &:hover,
@@ -128,10 +142,17 @@
             color: var(--accent-salmon);
         }
     }
+    @media screen and (min-width:768px) and (max-width:1279px){
+        & .contact__text{
+            line-height: calc(26px / 14px);
+        }
+    }
+    @include tablet{
+        margin-top: 32px;
+    }
 }
 .contact__title {
     @include text($a:500,$b:12px,$c:22px);
-    letter-spacing: 0.04em;
     @include tablet{
         @include text($a: 500,$c: 26px);
     }
@@ -141,12 +162,15 @@
 }
 .contact__title--dark {
     color: var(--text-black);
+    @include desktop{
+        letter-spacing: 0.04em;
+    }
 }
 .contact__title--light {
     color: var(--accent-salmon);
 }
 .contact__text {
-    @include text($a: 500, $b: 12px, $c: 22px);
+    @include text($a: 500, $b: 12px, $c: 18px);
     @include tablet{
         @include text($a: 500,$c: 23px);
     }
@@ -247,4 +271,12 @@
 .contacts_icon-arrow{
     width: 7px;
     height: 10px;
+}
+@keyframes contacts_bg_anim{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform: translateY(60px);
+    }
 }
