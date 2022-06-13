@@ -54,28 +54,28 @@
   }
 }
 .section-about__title {
-  padding: 0 64px 0 56px;
+  width: 200px;
+  margin: 0 auto 32px;
   text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent-text);
 
   font-family: Titan One;
   font-size: 34px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.14706;
-
-  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
 
   @include tablet {
-    padding: 0;
+    width: 431px;
     font-size: 48px;
     line-height: 1.1458;
     margin-bottom: 48px;
   }
 
   @include desktop {
+    width: 534px;
     font-size: 58px;
     line-height: 1.1379;
     margin-bottom: 88px;
@@ -115,36 +115,51 @@
   }
 }
 .info__list {
+  width: 220px;
   margin-bottom: 20px;
 
   @include tablet {
+    width: 334px;
     margin-bottom: 40px;
   }
+  @include desktop {
+    width: 457px;
+  }
 }
-.info__text {
-  width: 220px;
-  font-family: DM Sans;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.5833;
+.info__item {
   margin-bottom: 25px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--margin:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   @include tablet {
-    width: 334px;
-    font-size: 14px;
-    line-height: 1.7857;
     margin-bottom: 22px;
   }
 
   @include desktop {
-    width: 457px;
-    font-size: 16px;
-    line-height: 1.75;
     margin-bottom: 32px;
   }
 }
-.info__item--margin .info__text--margin {
-  margin-bottom: 0;
+.info__text {
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5833;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.7857;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.75;
+  }
 }
 .info__text--color {
   width: 220px;
@@ -153,7 +168,6 @@
   font-weight: 500;
   line-height: 1.58333;
   color: var(--comit-fon);
-  margin-bottom: 10px;
 
   @include tablet {
     width: 334px;

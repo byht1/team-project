@@ -97,6 +97,10 @@
   line-height: 1.1388;
   margin-bottom: 20px;
 
+  animation: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
   @include tablet {
     font-size: 48px;
     line-height: 1.1457;
