@@ -15,6 +15,6 @@ refs.btn.addEventListener('click', () => {
     a -= 1;
   }
 
-  refs.textOne.classList.toggle('імя класа');
-  refs.textTwo.classList.toggle('імя класа');
+  refs.textOne.classList.toggle('text-one');
+  refs.textTwo.classList.toggle('text-two');
 });
