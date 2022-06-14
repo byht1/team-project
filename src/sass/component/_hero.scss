@@ -2,12 +2,10 @@
   background-color: var(--fon);
   height: 444px;
   width: 100%;
-
   overflow: hidden;
-
   @media screen and (min-width: 768px) {
-    overflow: visible;
     height: 315px;
+    overflow: visible;
   }
   @media screen and (min-width: 1280px) {
     height: 664px;
@@ -17,6 +15,10 @@
 .hero-container {
   position: relative;
   height: 100%;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    overflow: visible;
+  }
 }
 
 .hero-container::after {
@@ -43,18 +45,34 @@
   }
 }
 
+@keyframes changePosition {
+  0% {
+    left: -180%;
+    opacity: 0;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+.hero-container::after {
+  animation-name: changePosition;
+  animation-duration: 2000ms;
+}
+
 .hero-ice-cream {
   width: 171px;
   height: 410px;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translate(-25%);
+  left: 37%;
   z-index: 1;
+
   @media screen and (min-width: 768px) {
     width: 143px;
     height: 336px;
-    transform: translate(-42%);
+    left: 43%;
   }
   @media screen and (min-width: 1280px) {
     width: 236px;
@@ -113,12 +131,18 @@
   &:hover,
   &:focus {
     background-color: var(--hover-btn-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    transform: scale(1.1);
   }
   &--inverse {
     background-color: var(--focus-white);
     &:hover,
     &:focus {
       background-color: var(--inverse-hover-btn-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      transform: scale(1.1);
     }
   }
 }
@@ -142,6 +166,7 @@
     margin-left: 12px;
   }
 }
+
 /*------------------------------NUMBERS-------------------------------*/
 /*.hero__numb {
   display: none;
@@ -212,13 +237,15 @@
 
 .hero__discrip {
   display: none;
+  overflow: hidden;
+  padding-bottom: 1px;
   @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
     z-index: 3;
     max-width: 114px;
     bottom: 57px;
-    left: 183px;
+    left: 173px;
     @include text('DM Sans', 400, 8px, 12px);
     color: var(--focus-white);
   }
@@ -233,6 +260,24 @@
     color: var(--focus-white);
   }
 }
+.hero__text {
+  transition: transform 1s var(--cubic);
+}
+.hero__text--second {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 1s var(--cubic);
+}
+
+.text-one {
+  transform: translateX(100%);
+}
+
+.text-two {
+  transform: translateX(0);
+}
 
 .hero__button-arrow {
   width: 18px;
@@ -243,10 +288,28 @@
   align-items: center;
   justify-content: center;
   margin-top: 7px;
+  transition: background-color 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-color);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .button-arrow {
   fill: var(--accent-text);
+  transition: fill 250ms var(--cubic);
+  .hero__button-arrow:hover &,
+  .hero__button-arrow:focus & {
+    fill: var(--focus-white);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 11px;
+    height: 12px;
+  }
 }
 
 .hero__numb {

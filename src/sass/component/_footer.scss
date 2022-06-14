@@ -2,16 +2,19 @@
   position: relative;
 }
 
-.fab:hover .fab-buttons {
+.fab:hover .fab-buttons,
+.fab:focus .fab-buttons {
   opacity: 1;
   visibility: visible;
 }
 
-.fab:hover .fab-buttons__link {
+.fab:hover .fab-buttons__link,
+.fab:focus .fab-buttons__link {
   transform: scaleY(1) scaleX(1) translateY(-16px) translateX(0px);
 }
 
-.fab-action-button:hover + .fab-buttons .fab-buttons__link:before {
+.fab-action-button:hover + .fab-buttons .fab-buttons__link:before,
+.fab-action-button:focus + .fab-buttons .fab-buttons__link:before {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -34,6 +37,7 @@
 
 .fab-buttons {
   position: absolute;
+  z-index: 10;
   left: 50%;
   transform: translate(-50%);
   bottom: 20px;
@@ -68,11 +72,12 @@
 }
 
 [data-tooltip]:before {
+  @include text('DM Sans', 700, 14px, 26px);
   top: 50%;
-  margin-top: -11px;
+  margin-top: -15px;
   font-weight: 600;
   border-radius: 2px;
-  background: #585858;
+  background: #fea5bb;
   color: #fff;
   content: attr(data-tooltip);
   font-size: 12px;
@@ -83,13 +88,14 @@
   margin-right: 12px;
   position: absolute;
   transform: scale(0);
-  right: 100%;
+  left: 120%;
   white-space: nowrap;
   transform-origin: top right;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-[data-tooltip]:hover:before {
+[data-tooltip]:hover:before,
+[data-tooltip]:focus:before {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -117,8 +123,11 @@
   color: var(--accent-salmon);
 }
 
-.title-second {
+.footer-title-item:last-child {
   margin-top: 16px;
+}
+
+.title-second {
   width: 200px;
   @include text('Titan One', 400, 34px, 39px);
   letter-spacing: 0.04em;
@@ -126,8 +135,11 @@
   color: var(--accent-text);
 }
 
-.footer-social {
+.footer-contact {
   margin-top: 40px;
+}
+
+.footer-social {
   display: flex;
   justify-content: end;
   gap: 28px;
@@ -183,14 +195,21 @@
   border-radius: 50%;
 }
 
-@media screen and (min-width: 768px) {
-  .footer-cont {
-    padding-top: 20px;
-  }
+.footer__decoration:hover,
+.footer-number:focus .footer__decoration {
+  text-decoration: underline;
+}
 
+@media screen and (min-width: 500px) {
   .footer-box {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-cont {
+    padding-top: 20px;
   }
 
   .title-first {
@@ -200,8 +219,11 @@
     color: var(--accent-salmon);
   }
 
-  .title-second {
+  .footer-title-item:last-child {
     margin-top: 12px;
+  }
+
+  .title-second {
     width: 340px;
     @include text('Titan One', 400, 48px, 58px);
     letter-spacing: 0.06em;
@@ -230,8 +252,11 @@
     @include text('Titan One', 400, 30px, 34px);
   }
 
-  .title-second {
+  .footer-title-item:last-child {
     margin-top: 16px;
+  }
+
+  .title-second {
     width: auto;
     @include text('Titan One', 400, 58px, 66px);
   }
