@@ -237,13 +237,15 @@
 
 .hero__discrip {
   display: none;
+  overflow: hidden;
+  padding-bottom: 1px;
   @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
     z-index: 3;
     max-width: 114px;
     bottom: 57px;
-    left: 183px;
+    left: 173px;
     @include text('DM Sans', 400, 8px, 12px);
     color: var(--focus-white);
   }
@@ -258,6 +260,24 @@
     color: var(--focus-white);
   }
 }
+.hero__text {
+  transition: transform 1s var(--cubic);
+}
+.hero__text--second {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 1s var(--cubic);
+}
+
+.text-one {
+  transform: translateX(100%);
+}
+
+.text-two {
+  transform: translateX(0);
+}
 
 .hero__button-arrow {
   width: 18px;
@@ -268,10 +288,28 @@
   align-items: center;
   justify-content: center;
   margin-top: 7px;
+  transition: background-color 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-color);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .button-arrow {
   fill: var(--accent-text);
+  transition: fill 250ms var(--cubic);
+  .hero__button-arrow:hover &,
+  .hero__button-arrow:focus & {
+    fill: var(--focus-white);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 11px;
+    height: 12px;
+  }
 }
 
 .hero__numb {
