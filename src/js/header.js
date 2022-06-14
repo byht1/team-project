@@ -59,9 +59,4 @@ $(document).ready(function () {
       console.log('🚀 ~ scrol', scrol);
     }, 500)
   );
-
-  $('.back-top').click(function () {
-    $('html, body').animate({ scrollTop: 0 }, ease);
-    return false;
-  });
 });

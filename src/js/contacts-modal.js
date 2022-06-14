@@ -1,3 +1,14 @@
+const body = document.querySelector('body');
+const btnStart = document.querySelector('.js-cont-start');
+const btnEnd = document.querySelector('.js-cont-end');
+
+btnStart.addEventListener('click', () => {
+  body.classList.toggle('hidden');
+});
+btnEnd.addEventListener('click', () => {
+  body.classList.toggle('hidden');
+});
+
 function selectLocation(i) {
   var el = document.getElementsByClassName('contacts-modal__loc-info');
   if (el[i].classList.contains('colorless')) {
