@@ -1,5 +1,6 @@
 (() => {
   const refs = {
+    body: document.querySelector('body'),
     openModalBtnOne: document.querySelector('[data-modal-open-one]'),
     openModalBtnTwo: document.querySelector('[data-modal-open-two]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
@@ -12,5 +13,6 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+    refs.body.classList.toggle('hidden');
   }
 })();

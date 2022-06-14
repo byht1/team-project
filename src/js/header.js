@@ -43,7 +43,7 @@ window.addEventListener(
       refs.header.removeAttribute('style');
       return;
     }
-    refs.header.style.backgroundColor = '#00000060';
+    refs.header.style.backgroundColor = 'rgba(212, 20, 67, 0.37)';
   }, 500)
 );
 
