@@ -1,7 +1,6 @@
 .customer {
   padding-bottom: 48px;
   padding-top: 40px;
-  // position: relative;
   overflow: hidden;
   @media screen and (max-width: 767.98px) {
     padding-top: 40px;
@@ -42,6 +41,7 @@
   justify-content: center;
   background-color: #fafafa;
   @media screen and (max-width: 767.98px) {
+    padding: 0 60px;
     padding-top: 43px;
     padding-bottom: 17px;
   }
@@ -111,20 +111,17 @@
 
 .box-text {
   position: relative;
-  // top: 13px;
-
   text-align: center;
 
   z-index: 2;
   @media screen and (max-width: 767.98px) {
-    width: 180px;
+    // width: 180px;
     background-image: repeating-linear-gradient(
       #fafafa,
       #fafafa 28px,
       #e1e1e1 31px,
       #e1e1e1 0
     );
-    // margin-bottom: 53px;
   }
   @media screen and (min-width: 768px) {
     width: 620px;
@@ -134,7 +131,6 @@
       #e1e1e1 30px,
       #e1e1e1 0
     );
-    // margin-bottom: 60px;
   }
   @media screen and (min-width: 1280px) {
     width: 821px;
@@ -144,7 +140,6 @@
       #e1e1e1 30px,
       #e1e1e1 0
     );
-    // margin-bottom: 75px;
   }
 }
 
@@ -154,11 +149,10 @@
 
   margin-left: auto;
   margin-right: auto;
-  // border-bottom: 1px solid #E1E1E1;
   @media screen and (max-width: 767.98px) {
     font-size: 12px;
     line-height: 258%;
-    max-width: 157px;
+    // max-width: 157px;
   }
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -230,54 +224,6 @@
   }
 }
 
-// .customer-list-home {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// .slick-dots {
-
-// }
-// .customer-item-home {
-
-// }
-
-// .slick-active {}
-
-// .slick-active:not(:last-child) {
-//     margin-right: 10px;
-// }
-
-// .bc-non {
-//     background-color: #FAFAFA;
-// }
-
-// .slick-active button {
-
-//     width: 12px;
-//     height: 12px;
-//     border-radius: 50%;
-//     background-color: #D9D9D9;
-// }
-// .slick-active button:focus {
-//     background-color: #FAFAFA;
-// }
-
-// .customer-icon-home {
-//     fill: #D31342;
-//     opacity: 0;
-// }
-// .customer-icon-home:focus {
-
-//     opacity: 1;
-// }
-
-// .customer-click:focus .customer-icon-home{
-
-//    opacity: 1;
-// }
-
 .slick-dotted.slick-slider {
   @media screen and (max-width: 767.98px) {
     margin-bottom: 30px;
@@ -307,21 +253,7 @@
       margin-right: 18px;
     }
     button {
-      // border: 0;
-      // background-color: #D9D9D9;
-      // border-radius: 50%;
-      // display: block;
-      // height: 12px;
-      // width: 12px;
-      // outline: none;
-      // line-height: 0px;
       font-size: 0px;
-      // color: transparent;
-      // padding: 5px;
-      // cursor: pointer;
-      // &:focus {
-      //     background-color: #FAFAFA;
-      // }
     }
   }
   @media screen and (max-width: 767.98px) {
@@ -336,41 +268,12 @@
 }
 
 .slick-dots li.slick-active {
-  // background-color: #C7133E;
-
   background-image: url(../images/people/home.png);
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-// &:hover, &:focus {
-//     outline: none;
-//     &:before {
-//         opacity: $slick-opacity-on-hover;
-//     }
-// }
-// &:before {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     // content: $slick-dot-character;
-//     width: 20px;
-//     height: 20px;
-//     // font-family: $slick-font-family;
-//     // font-size: $slick-dot-size;
-//     line-height: 20px;
-//     text-align: center;
-//     color: $slick-dot-color;
-//     opacity: $slick-opacity-not-active;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
-
-// &.slick-active button:before {
-//     color: $slick-dot-color-active;
-//     opacity: $slick-opacity-default;
-// }
 .comit__buttom {
   margin-left: 10px;
   font-family: 'DM Sans';
