@@ -41,13 +41,18 @@
   display: flex;
   justify-content: center;
   background-color: #fafafa;
+  
+  flex-direction: column;
+  align-items: center;
   @media screen and (max-width: 767.98px) {
     padding-top: 43px;
     padding-bottom: 17px;
+    
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 37px;
     padding-top: 36px;
+  //  
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 31px;
@@ -382,4 +387,61 @@
 
   color: var(--accent-text);
   background-color: transparent;
+}
+
+.list-star{
+  width: 90px;
+  height: 12px;
+  
+display: flex;
+list-style: none;
+position: relative;
+z-index: 3;
+
+bottom: 35px;
+@media screen and (max-width: 767.98px){
+  right: 0px;
+}
+@media screen and (min-width: 768px) {
+  right: calc((100% - 85px) / 3.2);
+}
+@media screen and (min-width: 1280px) {
+  right: calc((100% - 85px) / 3.8);
+}
+}
+
+.item-star{
+margin-right: 17px;
+}
+.icon-star{
+position: absolute;
+fill: #ffffff;
+animation-name: anim;
+animation-duration: 800ms;
+animation-delay: 100ms;
+animation-timing-function: linear;
+animation-fill-mode:forwards;
+}
+@keyframes anim {
+  from {
+      fill: #D9D9D9;
+
+  }
+  to {
+      fill: #F3B51B;
+
+  }
+}
+
+.two {
+  animation-delay: 1000ms;
+}
+.three {
+  animation-delay: 2000ms;
+}
+.four {
+  animation-delay: 3000ms;
+}
+.five {
+  animation-delay: 4000ms;
 }
