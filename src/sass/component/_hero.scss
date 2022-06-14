@@ -238,13 +238,14 @@
 .hero__discrip {
   display: none;
   overflow: hidden;
+  padding-bottom: 1px;
   @media screen and (min-width: 768px) {
     display: block;
     position: absolute;
     z-index: 3;
     max-width: 114px;
     bottom: 57px;
-    left: 183px;
+    left: 173px;
     @include text('DM Sans', 400, 8px, 12px);
     color: var(--focus-white);
   }
@@ -292,6 +293,10 @@
   &:focus {
     background-color: var(--hover-btn-color);
   }
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .button-arrow {
@@ -300,6 +305,10 @@
   .hero__button-arrow:hover &,
   .hero__button-arrow:focus & {
     fill: var(--focus-white);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 11px;
+    height: 12px;
   }
 }
 
