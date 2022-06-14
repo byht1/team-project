@@ -1,0 +1,2 @@
+const t={btn:document.querySelector(".js-open-menu"),textOne:document.querySelector(".js-text-one"),textTwo:document.querySelector(".js-text-two")};let e=0;t.btn.addEventListener("click",(()=>{0===e?(t.btn.style.transform="rotateY(180deg)",e+=1):(t.btn.style.transform="rotateY(0)",e-=1),t.textOne.classList.toggle("text-one"),t.textTwo.classList.toggle("text-two")}));
+//# sourceMappingURL=index.931a990c.js.map
