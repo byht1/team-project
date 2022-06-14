@@ -9,7 +9,7 @@
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop-about.is-hidden-about {
   opacity: 0;
@@ -30,7 +30,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background-image: url('../images/how-its-made/milk-fresh-mobail-320-min.png');
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@
   font-weight: 400;
   line-height: 1.16667;
 
-  color: white;
+  color: var(--focus-white);
 
   @include tablet {
     font-size: 26px;
@@ -147,8 +147,7 @@
   }
 }
 .about-list {
-  justify-content: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   max-width: 450px;
 }
 .about-label-list {
@@ -180,7 +179,6 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5833;
-  text-align: center;
 
   @include tablet {
     font-size: 14px;
@@ -189,6 +187,26 @@
 
   @include desktop {
     font-size: 16px;
+    line-height: 1.75;
+  }
+}
+.about-list__number {
+  font-family: Titan One;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.14706;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.7857;
+  }
+
+  @include desktop {
+    font-size: 18px;
     line-height: 1.75;
   }
 }
