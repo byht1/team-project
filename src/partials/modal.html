@@ -1,18 +1,169 @@
-<div class="backdrop is-hidden no-scroll" data-modal>
-  <div class="modal">
+<div class="backdrop is-hidden  " data-modal>
+    <div class="modal-buy">
       <button type="button" class="modal-close-btn" data-modal-close>
-        
+        <svg class="modal-close-btn__icon"   width="20" height="20">
+          <use href="/src/images/sprite.svg#close-modal"></use>
+        </svg>
       </button>
-      
-      <form class="modal-form">
-        
-        <label fo<h3 class="modal__title">Buy now</h3>
-        <p>Lorem i totam, perferendis modi, nisi iusto neque aperiam ullam. Quisquam nesciunt labore architecto illo!</p>r="">
-          <input type="text">
-        </label>
-      </form>
+      <form class="modal-buy__form">
+          
+        <h2 class="modal-buy__title">Make your sweet choice</h2>
+            <div class="modal-buy__group"> 
+                  <p class="modal-buy__title-group cream">Ice cream</p>
+                  <ul class="modal-buy__list ice-cream">
+                  <li class="modal-buy__fieldset">
+                      <label for="ice-cream-vanilla" class="checkbox-label">
+                        <input class="checkbox" type="checkbox" name="ice-cream" value="ice-cream-vanilla" id="ice-cream-vanilla">
+                        <svg class="checkbox-icon-ice-cream" width="16" height="15">
+                          <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                        </svg>
+                        <svg class="checkbox-icon-border" width="16" height="15">
+                          <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                        </svg>
+                        <span class="modal-buy__lable">Vanilla</span>
+                        </label>
+                  </li>
+                  <li class="modal-buy__fieldset" >
+                    <label for="ice-cream-strawberry" class="checkbox-label">
+                      <input class="checkbox" type="checkbox" name="ice-cream" value="ice-cream-strawberry" id="ice-cream-strawberry">
+                      <svg class="checkbox-icon-ice-cream"  width="16" height="15">
+                        <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                      </svg>
+                      <svg class="checkbox-icon-border"  width="16" height="15">
+                        <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                      </svg>
+                      <span class="modal-buy__lable">Strawberry</span>
+                      </label>
+                  </li>
+                  <li class="modal-buy__fieldset" >
+                    <label for="ice-cream-chocolate" class="checkbox-label">
+                      <input class="checkbox" type="checkbox" name="ice-cream" value="ice-cream-chocolate" id="ice-cream-chocolate">
+                      <svg class="checkbox-icon-ice-cream" width="16" height="15">
+                        <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                      </svg>
+                      <svg class="checkbox-icon-border" width="16" height="15">
+                        <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                      </svg>
+                      <span class="modal-buy__lable">Chocolate</span>
+                    </label>
+                  </li>
+                </ul>
+              <picture class="modal-buy__img">
+                <source srcset="/src/images/products/ice-cream/web/ice-cream-mobail-249-min.webp 1x, /src/images/products/ice-cream/web/ice-cream-mobail-498-min.webp 2x " type="image/webp"/>
+                <source srcset="/src/images/products/ice-cream/ice-cream-mob-249-min.png 1x, /src/images/products/ice-cream/ice-cream-mob-498-min.png 2x" type="image/jpeg"/>
+                <img src="/src/images/products/ice-cream/ice-cream-mob-249-min.png" alt="ice cream" width="40" height="40" loading="lazy"/>
+              </picture>
+            </div>
+            <div class="modal-buy__group">
+              <p class="modal-buy__title-group coffee">Ice coffee</p>
+              <ul class="modal-buy__list ice-coffee">
+                <li class="modal-buy__fieldset" >
+                  <label for="ice-coffee-caramel" class="checkbox-label">
+                    <input class="checkbox" type="checkbox" name="ice-coffee" value="ice-coffee-vanilla" id="ice-coffee-caramel">
+                    <svg class="checkbox-icon-ice-cream coffee"  width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                    </svg>
+                    <svg class="checkbox-icon-border" width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                    </svg>
+                    <span class="modal-buy__lable">Milk and caramel</span>
+                  </label>
+                </li>
+                <li class="modal-buy__fieldset">
+                  <label for="ice-coffee-latte" class="checkbox-label">
+                    <input class="checkbox" type="checkbox" name="ice-coffee" value="ice-coffee-latte" id="ice-coffee-latte">
+                    <svg class="checkbox-icon-ice-cream" width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                    </svg>
+                    <svg class="checkbox-icon-border"  width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                    </svg>
+                    <span class="modal-buy__lable">Ice latte</span>
+                  </label>
+                </li>
+                <li class="modal-buy__fieldset" >
+                  <label for="ice-coffee-chocolate" class="checkbox-label">                
+                    <input class="checkbox" type="checkbox" name="ice-coffee" value="ice-coffee-chocolate" id="ice-coffee-chocolate">
+                    <svg class="checkbox-icon-ice-cream" width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                    </svg>
+                    <svg class="checkbox-icon-border" width="16" height="15">
+                      <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                    </svg>
+                    <span class="modal-buy__lable">Chocolate</span>
+                  </label>
+                </li>
+            </ul>
+            <picture class="modal-buy__img">
+              <source srcset="/src/images/products/ice-coffee/web/ice-coffee-mobail-249-min.webp 1x, /src/images/products/ice-coffee/web/ice-coffee-mobail-498-min.webp 2x " type="image/webp"/>
+              <source srcset="/src/images/products/ice-coffee/ice-coffee-mob-249-min.png 1x, /src/images/products/ice-coffee/ice-coffee-mob-498-min.png 2x" type="image/jpeg"/>
+              <img src="/src/images/products/ice-coffee/ice-coffee-mob-249-min.png" alt="ice cream" width="40" height="40" loading="lazy"/>
+            </picture>
+            </div>
+            <div class="modal-buy__group">  
+              <p class="modal-buy__title-group shak">Milkshakes</p>       
+              <ul class="modal-buy__list milkshakes">
+              <li class="modal-buy__fieldset">
+                <label for="milkshakes-vanilla" class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="milkshakes" value="milkshakes-vanilla" id="milkshakes-vanilla">
+                  <svg class="checkbox-icon-ice-cream"   width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                  </svg>
+                  <svg class="checkbox-icon-border"  width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                  </svg>
+                  <span class="modal-buy__lable">Vanilla</span>
+                </label>
+              </li>
+              <li class="modal-buy__fieldset" >
+                <label for="milkshakes-strawberry" class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="milkshakes" value="milkshakes-strawberry" id="milkshakes-strawberry">
+                  <svg class="checkbox-icon-ice-cream"  width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                  </svg>
+                  <svg class="checkbox-icon-border" width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                  </svg>
+                  <span class="modal-buy__lable">Strawberry</span>
+                </label>
+              </li>
+              <li class="modal-buy__fieldset">
+                <label for="milkshakes-chocolate" class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="milkshakes" value="milkshakes-chocolate" id="milkshakes-chocolate">
+                  <svg class="checkbox-icon-ice-cream" width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-ice-cream"></use>
+                  </svg>
+                  <svg class="checkbox-icon-border" width="16" height="15">
+                    <use href="/src/images/sprite.svg#icon-chek-border"></use>
+                  </svg>
+                  <span class="modal-buy__lable">Chocolate</span>
+                </label>
+              </li>
+              </ul>
+              <picture class="modal-buy__img">
+                <source srcset="/src/images/products/milkshakes/web/milkshakes-mobail-249-min.webp 1x, /src/images/products/milkshakes/web/milkshakes-mobail-498-min.webp 2x " type="image/webp"/>
+                <source srcset="/src/images/products/milkshakes/milkshakes-mob-249-min.png 1x, /src/images/products/milkshakes/milkshakes-mob-498-min.png 2x" type="image/jpeg"/>
+                <img src="/src/images/products/milkshakes/milkshakes-mob-249-min.png" alt="ice cream" width="40" height="40" loading="lazy"/>
+              </picture>
+            </div>
+          <div class="modal-form-fialds">
+            <div class="one-fild-container">
+              <label for="name" class="modal-form-label">Name</label>
+                  <input type="text" name="user-name" id="name" class="modal-form-fild">
+            </div>
+            <div class="one-fild-container">
+                  <label for="tel" class="modal-form-label">Phone number</label>
+                      <input type="tel" name="tel" id="tel" class="modal-form-fild" >
+            </div>
+            <div class="one-fild-container">
+                  <label for="comment" class="modal-form-label">Comment</label>
+                  <textarea name="comment" id="comment" cols="30" rows="3" placeholder="leave a comment" class="comment"></textarea>
+            </div>
+          </div>
 
-      
-      
-  </div>
+        <div class="modal-submit">
+          <button type="submit" class="modal-submit-btn">Send</button>
+      </div>
+        </form>   
+    </div> 
 </div>
