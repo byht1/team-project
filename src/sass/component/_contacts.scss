@@ -15,7 +15,7 @@
         align-items: center;
     }
 }
-.contacts_bg{
+.contacts-bg{
     @media screen and (max-width:1279px){
         display: none;
     }
@@ -67,6 +67,7 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 }
 .contact__category-wrap {
+    transition: background var(--cubic);
     @include flexCenter;
     height: 16px;
     border-radius: 4px;
@@ -152,6 +153,7 @@
     }
 }
 .contact__title {
+    transition: color var(--cubic);
     @include text($a:500,$b:12px,$c:22px);
     @include tablet{
         @include text($a: 500,$c: 26px);
@@ -170,6 +172,7 @@
     color: var(--accent-salmon);
 }
 .contact__text {
+    transition: color var(--cubic);
     @include text($a: 500, $b: 12px, $c: 18px);
     @include tablet{
         @include text($a: 500,$c: 23px);
@@ -204,6 +207,7 @@
         flex-direction: row;
     }
     @include desktop{
+        width: 393px;
         margin-top: 60px;
     }
 }
@@ -279,4 +283,135 @@
     100%{
         transform: translateY(60px);
     }
+}
+.contacts-backdrop{
+    transition: var(--cubic);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1002;
+    &.is-hidden .contacts-modal{
+        transform: translate(-50%,0) scale(0.5);
+    }
+}
+.contacts-modal {
+    z-index: 1003;
+    background-color:var(--focus-white);
+    width: calc(100% - 30px);
+    max-width: 450px;
+    padding: 30px 20px;
+    overflow-y: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 350ms;
+    @include tablet{
+        max-width:768px;
+    }
+}
+.contacts-modal__close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    &:hover .contacts-modal__close-btn-icon,
+    &:focus .contacts-modal__close-btn-icon{
+        transform: rotate(90deg);
+        stroke:var(--accent-salmon);
+    }
+}
+.contacts-modal__close-btn-icon {
+    width: 18px;
+    height: 18px;
+    transition: stroke var(--cubic), transform var(--cubic);
+    stroke: var(--comit-fon);
+}
+.contacts-modal__title {
+    @include text('Titan One',400,18px,21px);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color:var(--accent-salmon);
+    @include tablet{
+        @include text('Titan One', 400, 26px, 30px);
+    }
+    @include desktop{
+        @include text('Titan One', 400, 30px, 34px);
+    }
+}
+.contacts-modal__locations{
+    margin-top: 10px;
+    display: grid;
+    @include tablet{
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.contacts-modal__loc-info {
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-row-gap: 8px;
+    &:nth-child(2){
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+    }
+    @include tablet{
+        text-align: center;
+        padding: 0 10px;
+        &:nth-child(2){
+            border-top: none;
+            border-bottom: none;
+            border-left: 1px solid #E1E1E1;
+            border-right: 1px solid #E1E1E1;
+        } 
+    }
+}
+.contacts-modal__text-box {
+    display: flex;
+    align-items: center;
+    & .contact__title{
+        margin-left: 8px;
+    }
+    @include tablet{
+        flex-direction: column;
+        & .contact__title{
+            margin-left: 0;
+        }
+    }
+}
+.colorless{
+    & .contacts-modal__text-box .contact__category-wrap{
+        background-color: #ecebeb;
+    }
+    & .contacts-modal__text-box .contact__title{
+        color: var(--comit-fon);
+    }
+    & .contact__text{
+        color: #ecebeb;
+    }
+}
+.contacts-modal_map-wrap {
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 240px;
+    @include tablet{
+        margin-top: 30px;
+        height: 320px;
+    }
+    @include desktop{
+        height: 450px;
+    }
+}
+.contacts-modal_map {
+    height: 100%;
+    width: 100%;
 }
