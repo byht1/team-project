@@ -1,13 +1,4 @@
 const body = document.querySelector('body');
-const btnStart = document.querySelector('.js-cont-start');
-const btnEnd = document.querySelector('.js-cont-end');
-
-btnStart.addEventListener('click', () => {
-  body.classList.toggle('hidden');
-});
-btnEnd.addEventListener('click', () => {
-  body.classList.toggle('hidden');
-});
 
 function selectLocation(i) {
   var el = document.getElementsByClassName('contacts-modal__loc-info');
@@ -35,13 +26,27 @@ function selectLocation(i) {
     document.getElementById('contacts-modal_map').src = source;
   }
 }
-function contactsModalOpen() {
-  document
-    .getElementsByClassName('contacts-backdrop')[0]
-    .classList.remove('is-hidden');
+function contactsModalOLOpen() {
+  document.getElementsByClassName('contacts-modal')[0].classList.remove('is-hidden');
+  contactsBDShow();
 }
-function contactsModalClose() {
-  document
-    .getElementsByClassName('contacts-backdrop')[0]
-    .classList.add('is-hidden');
+function contactsModalOLClose() {
+  document.getElementsByClassName('contacts-modal')[0].classList.add('is-hidden');
+  contactsBDHide();
+}
+function contactsModalFranchiseOpen() {
+  document.getElementsByClassName('contacts-modal')[1].classList.remove('is-hidden');
+  contactsBDShow();
+}
+function contactsModalFranchiseClose() {
+  document.getElementsByClassName('contacts-modal')[1].classList.add('is-hidden');
+  contactsBDHide();
+}
+function contactsBDShow() {
+  document.getElementsByClassName('contacts-backdrop')[0].classList.remove('is-hidden');
+  body.classList.toggle('hidden');
+}
+function contactsBDHide() {
+  document.getElementsByClassName('contacts-backdrop')[0].classList.add('is-hidden');
+  body.classList.toggle('hidden');
 }
