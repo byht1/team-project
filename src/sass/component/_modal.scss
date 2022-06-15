@@ -64,7 +64,7 @@
       color: #D6A359;
     }
   }
-     &__title {
+    &__title {
       font-family: 'Titan One';
       font-style: normal;
       font-weight: 400;
@@ -128,6 +128,15 @@
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: var(--focus-white);
+  &:focus-within .checkbox-icon-border {
+    fill: var(--accent-text);
+  }
+}
+
+.modal-buy__lable {
+  padding-left: 20px;
+  color: var(--focus-white);
+  transition: color  var(--cubic);
 
 }
 .is-hidden {
@@ -140,6 +149,9 @@ visibility: hidden;
   position: absolute;
   top: 8px;
   right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   width: 20px;
   height: 20px;
   background: #fff;
@@ -159,11 +171,20 @@ visibility: hidden;
     .modal-close-btn:hover & {
         fill: var(--accent-text);
     }
+    .modal-close-btn:focus & {
+      fill: var(--accent-text);
+  }
   }
 }
 
 .modal-buy__fieldset {
   position: relative;
+  &:focus-visible .checkbox-icon-border {
+    fill: var(--accent-text);
+  }
+  &:focus-visible  .modal-buy__lable {
+    color: var(--accent-text);
+  }
 }
 
 .checkbox-label {
@@ -177,10 +198,29 @@ visibility: hidden;
   .checkbox-icon-border:focus & {
     color: var(--accent-text);
   }
+  &:focus .checkbox-icon-border {
+    fill: var(--accent-text);
+  }
 }
 
+
 .checkbox {
-  visibility: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+  &:hover ~ .modal-buy__lable {
+    color: var(--accent-text);
+  }
+  &:focus ~ .modal-buy__lable {
+    color: var(--accent-text);
+  }
 } 
 
 .checkbox:checked ~ .checkbox-icon-border {
