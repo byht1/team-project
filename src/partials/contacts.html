@@ -153,28 +153,27 @@
     <!-- Батоны -->
     <div class="contacts-btn-box">
       <button
-        class="contacts-btn contacts-btn--dark js-cont-start"
-        onclick="contactsModalOpen()"
+        class="contacts-btn contacts-btn--dark"
+        onclick="contactsModalOLOpen()"
       >
         Our Locations
         <svg class="contacts_icon-arrow">
           <use href="./images/sprite.svg#arrow-short"></use>
         </svg>
       </button>
-      <button class="contacts-btn contacts-btn--light">
+      <button class="contacts-btn contacts-btn--light" onclick="contactsModalFranchiseOpen()">
         Franchise
         <svg class="contacts_icon-arrow">
           <use href="./images/sprite.svg#arrow-short"></use>
         </svg>
       </button>
     </div>
+    <!-- Бэкдроп -->
     <div class="contacts-backdrop is-hidden">
-      <div class="contacts-modal">
-        <button
-          class="contacts-modal__close-btn"
-          onclick="contactsModalClose()"
-        >
-          <svg class="contacts-modal__close-btn-icon js-cont-end">
+      <!-- Модалка 1 -->
+      <div class="contacts-modal is-hidden">
+        <button class="contacts-modal__close-btn" onclick="contactsModalOLClose()">
+          <svg class="contacts-modal__close-btn-icon">
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
@@ -232,6 +231,47 @@
           >
           </iframe>
         </div>
+      </div>
+      <!-- Модалка 2 -->
+      <div class="contacts-modal is-hidden">
+        <!-- Кнопка закрытия -->
+        <button class="contacts-modal__close-btn" onclick="contactsModalFranchiseClose()">
+          <svg class="contacts-modal__close-btn-icon">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="contacts-modal__title">Request Franchise Information</h2>
+        <form class="contacts-modal__form" action="">
+          <h3 class="contact__title contact__title--dark contacts-modal__category"><span>Personal Information</span></h3>
+          <div class="contacts-modal__label-box">
+            <div>
+              <label for="first-name" class="contact__text contact__text--dim">First Name</label>
+              <input type="text" class="contacts-modal__input contact__title contact__title--dark" id="first-name" name="first-name" required>
+            </div>
+            <div>
+              <label for="last-name" class="contact__text contact__text--dim">Last Name</label>
+              <input type="text" class="contacts-modal__input contact__title contact__title--dark" id="last-name" name="last-name" required>
+            </div>
+          </div>
+          <h3 class="contact__title contact__title--dark contacts-modal__category"><span>Contact Information</span></h3>
+          <div class="contacts-modal__label-box">
+            <div>
+              <label for="user-phone" class="contact__text contact__text--dim">Phone</label>
+              <input type="tel" class="contacts-modal__input contact__title contact__title--dark" id="user-phone" name="user-phone" required>
+            </div>
+            <div>
+              <label for="user-email" class="contact__text contact__text--dim">Email</label>
+              <input type="email" class="contacts-modal__input contact__title contact__title--dark" id="user-email" name="user-email" required>
+            </div>
+          </div>
+          <h3 class="contact__title contact__title--dark contacts-modal__category"><span>Message</span></h3>
+          <textarea class="contacts-modal__message" placeholder="Leave your message"></textarea>
+          <button type="submit" class="contacts-btn contacts-btn--dim">Send
+            <svg class="contacts_icon-arrow">
+              <use href="./images/sprite.svg#arrow-short"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </div>
