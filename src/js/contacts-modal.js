@@ -3,14 +3,14 @@ const btnStart = document.querySelector('.js-cont-start');
 const btnEnd = document.querySelector('.js-cont-end');
 const modalTwo = document.querySelector('.contacts-backdrop');
 
-btnStart.addEventListener('click', () => {
-  body.classList.add('hidden');
-  body.classList.add('activ-contact');
-});
-btnEnd.addEventListener('click', () => {
-  body.classList.remove('hidden');
-  body.classList.remove('activ-contact');
-});
+// btnStart.addEventListener('click', () => {
+//   body.classList.add('hidden');
+//   body.classList.add('activ-contact');
+// });
+// btnEnd.addEventListener('click', () => {
+//   body.classList.remove('hidden');
+//   body.classList.remove('activ-contact');
+// });
 
 document.addEventListener('keyup', () => {
   const isEscape = event.code === 'Escape';
@@ -61,26 +61,38 @@ function selectLocation(i) {
   }
 }
 function contactsModalOLOpen() {
-  document.getElementsByClassName('contacts-modal')[0].classList.remove('is-hidden');
+  document
+    .getElementsByClassName('contacts-modal')[0]
+    .classList.remove('is-hidden');
   contactsBDShow();
 }
 function contactsModalOLClose() {
-  document.getElementsByClassName('contacts-modal')[0].classList.add('is-hidden');
+  document
+    .getElementsByClassName('contacts-modal')[0]
+    .classList.add('is-hidden');
   contactsBDHide();
 }
 function contactsModalFranchiseOpen() {
-  document.getElementsByClassName('contacts-modal')[1].classList.remove('is-hidden');
+  document
+    .getElementsByClassName('contacts-modal')[1]
+    .classList.remove('is-hidden');
   contactsBDShow();
 }
 function contactsModalFranchiseClose() {
-  document.getElementsByClassName('contacts-modal')[1].classList.add('is-hidden');
+  document
+    .getElementsByClassName('contacts-modal')[1]
+    .classList.add('is-hidden');
   contactsBDHide();
 }
 function contactsBDShow() {
-  document.getElementsByClassName('contacts-backdrop')[0].classList.remove('is-hidden');
+  document
+    .getElementsByClassName('contacts-backdrop')[0]
+    .classList.remove('is-hidden');
   body.classList.toggle('hidden');
 }
 function contactsBDHide() {
-  document.getElementsByClassName('contacts-backdrop')[0].classList.add('is-hidden');
+  document
+    .getElementsByClassName('contacts-backdrop')[0]
+    .classList.add('is-hidden');
   body.classList.toggle('hidden');
 }
