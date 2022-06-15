@@ -169,7 +169,7 @@
     right: 0;
     bottom: 0;
     z-index: 1000;
-    width: 320px;
+    width: 254px;
     height: 100%;
     background-color: var(--accent);
     transform: translate(100%);
@@ -180,6 +180,11 @@
     &--show {
       transform: translate(0);
       opacity: 1;
+    }
+  }
+  @media screen and(max-width: 480px) {
+    .nav {
+      width: 100%;
     }
   }
 
