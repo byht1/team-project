@@ -322,9 +322,7 @@
   }
 }
 .contacts-modal {
-    @media screen and (max-width:767px) {
-        height: 92%;
-    }
+  max-height: 92%;
   z-index: 1003;
   background-color: var(--focus-white);
   width: calc(100% - 30px);
