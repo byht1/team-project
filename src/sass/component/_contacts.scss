@@ -322,6 +322,7 @@
   }
 }
 .contacts-modal {
+  height: 92%;
   z-index: 1003;
   background-color: var(--focus-white);
   width: calc(100% - 30px);
@@ -338,6 +339,12 @@
     max-width: 720px;
     padding-left: 30px;
     padding-right: 30px;
+    max-width: 768px;
+    height: 85%;
+  }
+
+  @include desktop {
+    height: 93%;
   }
 }
 .contacts-modal__close-btn {

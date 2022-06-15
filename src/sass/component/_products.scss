@@ -87,7 +87,6 @@
     height: 796px;
     padding-top: 262px;
   }
-
 }
 .products-card {
   position: relative;
@@ -329,9 +328,7 @@
   border-radius: 50%;
   background-color: #ffffff;
 
-  box-shadow: 0 2px 2px #00000024, 
-  0 1px 5px #0000001f, 
-  0 3px 1px -2px #0003;
+  box-shadow: 0 2px 2px #00000024, 0 1px 5px #0000001f, 0 3px 1px -2px #0003;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,

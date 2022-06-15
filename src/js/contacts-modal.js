@@ -1,4 +1,38 @@
 const body = document.querySelector('body');
+const btnStart = document.querySelector('.js-cont-start');
+const btnEnd = document.querySelector('.js-cont-end');
+const modalTwo = document.querySelector('.contacts-backdrop');
+
+btnStart.addEventListener('click', () => {
+  body.classList.add('hidden');
+  body.classList.add('activ-contact');
+});
+btnEnd.addEventListener('click', () => {
+  body.classList.remove('hidden');
+  body.classList.remove('activ-contact');
+});
+
+document.addEventListener('keyup', () => {
+  const isEscape = event.code === 'Escape';
+  const isActiv = document.querySelector('.activ-contact');
+  if (!isActiv) {
+    return;
+  }
+  if (isEscape) {
+    body.classList.remove('hidden');
+    body.classList.remove('activ-contact');
+    contactsModalClose();
+  }
+});
+
+modalTwo.addEventListener('click', () => {
+  if (!event.target.classList.contains('contacts-backdrop')) {
+    return;
+  }
+  body.classList.remove('hidden');
+  body.classList.remove('activ-contact');
+  contactsModalClose();
+});
 
 function selectLocation(i) {
   var el = document.getElementsByClassName('contacts-modal__loc-info');

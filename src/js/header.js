@@ -21,14 +21,37 @@ refs.menu.addEventListener('click', () => {
   }, 250);
 });
 
-refs.end.addEventListener('click', () => {
+refs.end.addEventListener('click', end);
+
+refs.nav.addEventListener('click', () => {
+  if (innerWidth >= 1280) {
+    return;
+  }
+  if (event.target.nodeName !== 'A') {
+    return;
+  }
+  end();
+});
+
+document.addEventListener('keyup', () => {
+  const isEscape = event.code === 'Escape';
+  const isActiv = document.querySelector('.nav--show');
+  if (!isActiv) {
+    return;
+  }
+  if (isEscape) {
+    end();
+  }
+});
+
+function end() {
   refs.menu.classList.toggle('none');
   refs.button.classList.toggle('none');
   refs.nav.classList.toggle('nav--show');
   refs.body.classList.toggle('hidden');
   refs.menu.classList.toggle('is-open');
   refs.button.classList.toggle('is-open');
-});
+}
 
 let scrol = 0;
 
@@ -50,13 +73,13 @@ window.addEventListener(
 $(document).ready(function () {
   $(window).scroll(
     throttle(() => {
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 50) {
         $('.back-top').fadeIn();
       } else {
         $('.back-top').fadeOut();
       }
       scrol += 1;
-      console.log('🚀 ~ scrol', scrol);
+      console.log('scroll (throttle)', scrol);
     }, 500)
   );
 });
