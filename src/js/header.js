@@ -24,6 +24,9 @@ refs.menu.addEventListener('click', () => {
 refs.end.addEventListener('click', end);
 
 refs.nav.addEventListener('click', () => {
+  if (innerWidth >= 1280) {
+    return;
+  }
   if (event.target.nodeName !== 'A') {
     return;
   }
