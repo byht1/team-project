@@ -1,417 +1,437 @@
-.contacts-section{
-    padding-top: 24px;
-    padding-bottom: 24px;
-    background: linear-gradient(rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 1) 26%,rgba(255,245,246,1) 26%, rgba(255,245,246,1) 100%);
-    @include tablet{
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-    @include desktop{
-        padding-top: 60px;
-        padding-bottom: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-.contacts-bg{
-    @media screen and (max-width:1279px){
-        display: none;
-    }
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../images/contacts/sectionbg.png);
-    width: 100%;
-    position: absolute;
-    margin-top: 103px;
-    height: 382px;
-    max-width: 1920px;
-    animation-play-state: paused;
-    animation: contacts_bg_anim 3s infinite ease-in-out alternate;
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution:192dpi),
-    (min-resolution:2dppx){
-        background-image:url(../images/contacts/sectionbg-2x.png);
-    }
-    @include desktop{
-        animation-play-state: running;
-    }
-}
-.contacts-section .container{
+.contacts-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 26%,
+    rgba(255, 245, 246, 1) 26%,
+    rgba(255, 245, 246, 1) 100%
+  );
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+.contacts-bg {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/contacts/sectionbg.png);
+  width: 100%;
+  position: absolute;
+  margin-top: 103px;
+  height: 382px;
+  max-width: 1920px;
+  animation-play-state: paused;
+  animation: contacts_bg_anim 3s infinite ease-in-out alternate;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/contacts/sectionbg-2x.png);
+  }
+  @include desktop {
+    animation-play-state: running;
+  }
+}
+.contacts-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contacts-list {
-    display: grid;
-    grid-row-gap: 20px;
-    z-index: 2;
-    @include tablet {
-        grid-row-gap: 0;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 32px;
-    }
+  display: grid;
+  grid-row-gap: 20px;
+  z-index: 2;
+  @include tablet {
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+  }
 }
 .contact {
-    border-radius: 24px;
-    padding: 40px 32px;
-    @include desktop{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+  border-radius: 24px;
+  padding: 40px 32px;
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
-.contact--light{
-    background: var(--focus-white);
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+.contact--light {
+  background: var(--focus-white);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 }
 .contact__category-wrap {
-    transition: background var(--cubic);
-    @include flexCenter;
-    height: 16px;
-    border-radius: 4px;
-    @include tablet{
-        height: 28px;
-    }
+  transition: background var(--cubic);
+  @include flexCenter;
+  height: 16px;
+  border-radius: 4px;
+  @include tablet {
+    height: 28px;
+  }
 }
 .contact__category {
-    @include text($a:500,$b:12px,$c:22px);
-    letter-spacing: 0.04em;
-    @include tablet{
-        @include text($a: 500, $b: 16px, $c: 30px);
-    }
+  @include text($a: 500, $b: 12px, $c: 22px);
+  letter-spacing: 0.04em;
+  @include tablet {
+    @include text($a: 500, $b: 16px, $c: 30px);
+  }
 }
 
 .contact__category--light {
-    color:var(--focus-white);
+  color: var(--focus-white);
 }
 .contact__category-wrap--cafe {
-    width: 80px;
-    background: var(--dull-yellow);
-    @include tablet {
-        width: 73px;
-    }
+  width: 80px;
+  background: var(--dull-yellow);
+  @include tablet {
+    width: 73px;
+  }
 }
 .contact__category-wrap--foodtruck {
-    width: 130px;
-    background: var(--dull-green);
-    @include tablet {
-        width: 138px;
-    }
+  width: 130px;
+  background: var(--dull-green);
+  @include tablet {
+    width: 138px;
+  }
 }
-.loc__info{
-    margin-top: 20px;
-    & p{
-        margin-top: 8px;
+.loc__info {
+  margin-top: 20px;
+  & p {
+    margin-top: 8px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    & p {
+      margin-top: 12px;
     }
-    @media screen and (min-width: 768px) and (max-width: 1279px){
-        & p{
-            margin-top: 12px;
-        }
-    }
-    @include tablet{
-        margin-top: 32px;
-    }
+  }
+  @include tablet {
+    margin-top: 32px;
+  }
 }
-.contact__work-time{
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-top: 24px;
-    & div + div{
-         margin-top: 8px;
+.contact__work-time {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 24px;
+  & div + div {
+    margin-top: 8px;
+  }
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    & div + div {
+      margin-top: 12px;
     }
-    @include tablet{
-        padding-top: 32px;
-        padding-bottom: 32px;
-        margin-top: 32px;
-        & div + div{
-            margin-top: 12px;
-        }
-    }
+  }
 }
-.contact__links{
-    margin-top: 24px;
-    & .contact__text{
-        transition: color var(--cubic), text-shadow var(--cubic);
-        &:hover,
-        &:focus{
-            text-shadow: 0 0 5px rgba(212, 20, 67, 0.1),
-            0 0 8px rgba(212, 20, 67, 0.05);
-            color: var(--accent-salmon);
-        }
+.contact__links {
+  margin-top: 24px;
+  & .contact__text {
+    transition: color var(--cubic), text-shadow var(--cubic);
+    &:hover,
+    &:focus {
+      text-shadow: 0 0 5px rgba(212, 20, 67, 0.1),
+        0 0 8px rgba(212, 20, 67, 0.05);
+      color: var(--accent-salmon);
     }
-    @media screen and (min-width:768px) and (max-width:1279px){
-        & .contact__text{
-            line-height: calc(26px / 14px);
-        }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    & .contact__text {
+      line-height: calc(26px / 14px);
     }
-    @include tablet{
-        margin-top: 32px;
-    }
+  }
+  @include tablet {
+    margin-top: 32px;
+  }
 }
 .contact__title {
-    transition: color var(--cubic);
-    @include text($a:500,$b:12px,$c:22px);
-    @include tablet{
-        @include text($a: 500,$c: 26px);
-    }
-    @include desktop{
-        @include text($a: 500,$b: 16px, $c: 30px);
-    }
+  transition: color var(--cubic);
+  @include text($a: 500, $b: 12px, $c: 22px);
+  @include tablet {
+    @include text($a: 500, $c: 26px);
+  }
+  @include desktop {
+    @include text($a: 500, $b: 16px, $c: 30px);
+  }
 }
 .contact__title--dark {
-    color: var(--text-black);
-    @include desktop{
-        letter-spacing: 0.04em;
-    }
+  color: var(--text-black);
+  @include desktop {
+    letter-spacing: 0.04em;
+  }
 }
 .contact__title--light {
-    color: var(--accent-salmon);
+  color: var(--accent-salmon);
 }
 .contact__text {
-    transition: color var(--cubic);
-    @include text($a: 500, $b: 12px, $c: 18px);
-    @include tablet{
-        @include text($a: 500,$c: 23px);
-    }
-    @include desktop{
-        @include text($a: 500,$b: 16px, $c: 29px);
-    }
+  transition: color var(--cubic);
+  @include text($a: 500, $b: 12px, $c: 18px);
+  @include tablet {
+    @include text($a: 500, $c: 23px);
+  }
+  @include desktop {
+    @include text($a: 500, $b: 16px, $c: 29px);
+  }
 }
 .contact__text--dim {
-    color: var(--comit-fon);
+  color: var(--comit-fon);
 }
 .contact__line {
-    border: 1px solid #E1E1E1;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    @include tablet{
-        margin-top: 32px;
-        margin-bottom: 32px;
-    }
-}
-.contacts-btn-box{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  border: 1px solid #e1e1e1;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  @include tablet {
     margin-top: 32px;
-    width:161px;
-    height: 98px;
-    @include tablet{
-        width: 380px;
-        height: 44px;
-        margin-top: 40px;
-        flex-direction: row;
-    }
-    @include desktop{
-        width: 393px;
-        margin-top: 60px;
-    }
+    margin-bottom: 32px;
+  }
 }
-.contacts-btn{
-    transition: background-color var(--cubic),padding-left var(--cubic),padding-right var(--cubic);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+.contacts-btn-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 32px;
+  width: 161px;
+  height: 98px;
+  @include tablet {
+    width: 380px;
     height: 44px;
-    border-radius: 22px;
-    @include text($a:700,$b:16px,$c:21px);
-    &:focus,
-    &:hover {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+    margin-top: 40px;
+    flex-direction: row;
+  }
+  @include desktop {
+    width: 393px;
+    margin-top: 60px;
+  }
+}
+.contacts-btn {
+  transition: background-color var(--cubic), padding-left var(--cubic),
+    padding-right var(--cubic);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  border-radius: 22px;
+  @include text($a: 700, $b: 16px, $c: 21px);
+  &:focus,
+  &:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .contacts-btn--dark {
-    padding-left: 17px;
-    padding-right: 17px;
-    background-color: var(--accent-bg);
-    color: var(--focus-white);
-    & .contacts_icon-arrow {
-        stroke: var(--focus-white);
-    }
-    &:focus,
-    &:hover {
-        background-color: var(--hover-btn-color);
-    }
-    @include tablet {
-        width: 191px;
-        padding-left: 30px;
-        padding-right: 34px;
-    }
-    @include desktop{
-        width: 198px;
-        padding-left: 35px;
-        padding-right: 35px;
-    }
+  padding-left: 17px;
+  padding-right: 17px;
+  background-color: var(--accent-bg);
+  color: var(--focus-white);
+  & .contacts_icon-arrow {
+    stroke: var(--focus-white);
+  }
+  &:focus,
+  &:hover {
+    background-color: var(--hover-btn-color);
+  }
+  @include tablet {
+    width: 191px;
+    padding-left: 30px;
+    padding-right: 34px;
+  }
+  @include desktop {
+    width: 198px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
-.contacts-btn--light{
-    padding-left: 32px;
-    padding-right: 32px;
-    background-color: var(--focus-white);
-    color: var(--accent-text);
-    & .contacts_icon-arrow{
-        stroke:var(--accent-text);
-    }
-    &:focus,
-    &:hover{
-        background-color: var(--inverse-hover-btn-color);
-    }
-    @include tablet{
-        width: 174px;
-        padding-left: 38px;
-        padding-right: 38px;
-    }
-    @include desktop{
-        width: 180px;
-        padding-left: 39px;
-        padding-right: 39px;
-    }
+.contacts-btn--light {
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--focus-white);
+  color: var(--accent-text);
+  & .contacts_icon-arrow {
+    stroke: var(--accent-text);
+  }
+  &:focus,
+  &:hover {
+    background-color: var(--inverse-hover-btn-color);
+  }
+  @include tablet {
+    width: 174px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+  @include desktop {
+    width: 180px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
 }
-.contacts_icon-arrow{
-    width: 7px;
-    height: 10px;
+.contacts_icon-arrow {
+  width: 7px;
+  height: 10px;
 }
-@keyframes contacts_bg_anim{
-    0%{
-        transform:translateY(0);
-    }
-    100%{
-        transform: translateY(60px);
-    }
+@keyframes contacts_bg_anim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(60px);
+  }
 }
-.contacts-backdrop{
-    transition: var(--cubic);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1002;
-    &.is-hidden .contacts-modal{
-        transform: translate(-50%,0) scale(0.5);
-    }
+.contacts-backdrop {
+  transition: var(--cubic);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  &.is-hidden .contacts-modal {
+    transform: translate(-50%, 0) scale(0.5);
+  }
 }
 .contacts-modal {
-    z-index: 1003;
-    background-color:var(--focus-white);
-    width: calc(100% - 30px);
-    max-width: 450px;
-    padding: 30px 20px;
-    overflow-y: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 350ms;
-    @include tablet{
-        max-width:768px;
-    }
+  height: 100%;
+  z-index: 1003;
+  background-color: var(--focus-white);
+  width: calc(100% - 30px);
+  max-width: 450px;
+  padding: 30px 20px;
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 350ms;
+  @include tablet {
+    max-width: 768px;
+  }
 }
 .contacts-modal__close-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0000;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    &:hover .contacts-modal__close-btn-icon,
-    &:focus .contacts-modal__close-btn-icon{
-        transform: rotate(90deg);
-        stroke:var(--accent-salmon);
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  &:hover .contacts-modal__close-btn-icon,
+  &:focus .contacts-modal__close-btn-icon {
+    transform: rotate(90deg);
+    stroke: var(--accent-salmon);
+  }
 }
 .contacts-modal__close-btn-icon {
-    width: 18px;
-    height: 18px;
-    transition: stroke var(--cubic), transform var(--cubic);
-    stroke: var(--comit-fon);
+  width: 18px;
+  height: 18px;
+  transition: stroke var(--cubic), transform var(--cubic);
+  stroke: var(--comit-fon);
 }
 .contacts-modal__title {
-    @include text('Titan One',400,18px,21px);
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color:var(--accent-salmon);
-    @include tablet{
-        @include text('Titan One', 400, 26px, 30px);
-    }
-    @include desktop{
-        @include text('Titan One', 400, 30px, 34px);
-    }
+  @include text('Titan One', 400, 18px, 21px);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-salmon);
+  @include tablet {
+    @include text('Titan One', 400, 26px, 30px);
+  }
+  @include desktop {
+    @include text('Titan One', 400, 30px, 34px);
+  }
 }
-.contacts-modal__locations{
-    margin-top: 10px;
-    display: grid;
-    @include tablet{
-        margin-top: 30px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.contacts-modal__locations {
+  margin-top: 10px;
+  display: grid;
+  @include tablet {
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .contacts-modal__loc-info {
-    cursor: pointer;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: grid;
-    grid-row-gap: 8px;
-    &:nth-child(2){
-        border-top: 1px solid #E1E1E1;
-        border-bottom: 1px solid #E1E1E1;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-row-gap: 8px;
+  &:nth-child(2) {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  @include tablet {
+    text-align: center;
+    padding: 0 10px;
+    &:nth-child(2) {
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
     }
-    @include tablet{
-        text-align: center;
-        padding: 0 10px;
-        &:nth-child(2){
-            border-top: none;
-            border-bottom: none;
-            border-left: 1px solid #E1E1E1;
-            border-right: 1px solid #E1E1E1;
-        } 
-    }
+  }
 }
 .contacts-modal__text-box {
-    display: flex;
-    align-items: center;
-    & .contact__title{
-        margin-left: 8px;
+  display: flex;
+  align-items: center;
+  & .contact__title {
+    margin-left: 8px;
+  }
+  @include tablet {
+    flex-direction: column;
+    & .contact__title {
+      margin-left: 0;
     }
-    @include tablet{
-        flex-direction: column;
-        & .contact__title{
-            margin-left: 0;
-        }
-    }
+  }
 }
-.colorless{
-    & .contacts-modal__text-box .contact__category-wrap{
-        background-color: #ecebeb;
-    }
-    & .contacts-modal__text-box .contact__title{
-        color: var(--comit-fon);
-    }
-    & .contact__text{
-        color: #ecebeb;
-    }
+.colorless {
+  & .contacts-modal__text-box .contact__category-wrap {
+    background-color: #ecebeb;
+  }
+  & .contacts-modal__text-box .contact__title {
+    color: var(--comit-fon);
+  }
+  & .contact__text {
+    color: #ecebeb;
+  }
 }
 .contacts-modal_map-wrap {
-    margin-top: 10px;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 240px;
-    @include tablet{
-        margin-top: 30px;
-        height: 320px;
-    }
-    @include desktop{
-        height: 450px;
-    }
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 240px;
+  @include tablet {
+    margin-top: 30px;
+    height: 320px;
+  }
+  @include desktop {
+    height: 450px;
+  }
 }
 .contacts-modal_map {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.contacts-modal::-webkit-scrollbar {
+  width: 5px;
+}
+.contacts-modal::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+.contacts-modal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #d41443, #ffa5ba);
 }
